@@ -23,7 +23,7 @@ public class TcsRepositoryInterceptor {
      * @param joinPoint
      * @throws TcsApplicationException
      */
-    @Before("execution(* *..*Repository.save(..))")
+    @Before("execution(* com.tcs.denmail..*Repository.save(..))")
     public void before(JoinPoint joinPoint) throws TcsApplicationException {
         for (Object obj : joinPoint.getArgs()) {
             if (obj instanceof TcsBaseEntity) {
@@ -51,7 +51,7 @@ public class TcsRepositoryInterceptor {
      * @param joinPoint
      * @throws TcsApplicationException
      */
-    @Before("execution(* *..*Repository.*(..))")
+    @Before("execution(* com.tcs.denmail..*Repository.*(..))")
     public void beforeLog(JoinPoint joinPoint) throws TcsApplicationException {
         LogUtil.log("DM0001D", new String[] { makeClassMethodName(joinPoint) });
     }
@@ -62,7 +62,7 @@ public class TcsRepositoryInterceptor {
      * @param joinPoint
      * @throws TcsApplicationException
      */
-    @After("execution(* *..*Repository.*(..))")
+    @After("execution(* com.tcs.denmail..*Repository.*(..))")
     public void afterLog(JoinPoint joinPoint) throws TcsApplicationException {
         LogUtil.log("DM0002D", new String[] { makeClassMethodName(joinPoint) });
     }

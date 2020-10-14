@@ -11,7 +11,7 @@ import org.springframework.stereotype.Component;
 
 @Component
 @Aspect
-public class TcsServiceInterceptor {
+public class TcsControllerInterceptor {
 
     /**
      * メソッド実行前処理.
@@ -19,7 +19,7 @@ public class TcsServiceInterceptor {
      * @param joinPoint
      * @throws TcsApplicationException
      */
-    @Before("execution(* *..*ServiceImpl.*(..))")
+    @Before("execution(* com.tcs.denmail..*Controller.*(..))")
     public void beforeLog(JoinPoint joinPoint) throws TcsApplicationException {
         LogUtil.log("DM0001D", new String[] { makeClassMethodName(joinPoint) });
     }
@@ -30,7 +30,7 @@ public class TcsServiceInterceptor {
      * @param joinPoint
      * @throws TcsApplicationException
      */
-    @After("execution(* *..*ServiceImpl.*(..))")
+    @After("execution(* com.tcs.denmail..*Controller.*(..))")
     public void afterLog(JoinPoint joinPoint) throws TcsApplicationException {
         LogUtil.log("DM0002D", new String[] { makeClassMethodName(joinPoint) });
     }

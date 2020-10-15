@@ -19,27 +19,27 @@ public class AtesakiCdServiceImpl implements AtesakiCdService {
     public AtesakiCdEntity syncData(AtesakiCdModel in) {
         ReturnValue returnValue = new ReturnValue();
 
-        AtesakiCdEntity entity = new AtesakiCdEntity();
-        entity.setKanriNo(in.getKanriNo());
-        entity.setTaishoKbn(in.getTaishoKbn());
-        entity.setCAtesakiCd(in.getCAtesakiCd());
-        entity.setRAtesakiCd(in.getRAtesakiCd());
+        AtesakiCdEntity atesakiCdEntity = new AtesakiCdEntity();
+        atesakiCdEntity.setKanriNo(in.getKanriNo());
+        atesakiCdEntity.setTaishoKbn(in.getTaishoKbn());
+        atesakiCdEntity.setCAtesakiCd(in.getCAtesakiCd());
+        atesakiCdEntity.setRAtesakiCd(in.getRAtesakiCd());
 
         switch (in.getRealTimeLinkDeleteFlg()) {
             // INSERT_UPDATE
             case RealTimeLinkDeleteFlg.INSERT_UPDATE:
                 // DBよりデータを取得(キー値)
-                if (atesakiCdRepository.findById(entity).isPresent()) {
+                if (atesakiCdRepository.findById(atesakiCdEntity).isPresent()) {
                     // TODO log
                 } else {
-                    returnValue.entity = atesakiCdRepository.saveAndFlush(entity);
+                    returnValue.entity = atesakiCdRepository.saveAndFlush(atesakiCdEntity);
                 }
                 break;
             // DELETE
             case RealTimeLinkDeleteFlg.DELETE:
-                atesakiCdRepository.findById(entity).ifPresentOrElse(e -> {
-                    returnValue.entity = e;
-                    atesakiCdRepository.delete(e);
+                atesakiCdRepository.findById(atesakiCdEntity).ifPresentOrElse(entity -> {
+                    returnValue.entity = entity;
+                    atesakiCdRepository.delete(entity);
                 }, () -> {
                     // TODO log
                 });

@@ -8,11 +8,11 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 @SpringBootApplication
 @EnableJpaRepositories(basePackages = "com.tcs.denmail.online.domain.repository")
-public class OnlineApplication {
+public class Application {
 
 	public static void main(String[] args) {
 		MsgProperty.startup();
-		SpringApplication.run(OnlineApplication.class, args);
+		SpringApplication.run(Application.class, args);
 	}
 
 }

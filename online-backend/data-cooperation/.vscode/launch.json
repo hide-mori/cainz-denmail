@@ -6,20 +6,12 @@
   "configurations": [
     {
       "type": "java",
-      "name": "Debug (Launch)-OnlineApplication<online>",
-      "request": "launch",
-      "mainClass": "com.tcs.denmail.online.OnlineApplication",
-      "projectName": "online-cooperation-dev",
-      "console": "internalConsole"
-    },
-    {
-      "type": "java",
-      "name": "Spring Boot-OnlineApplication<online-cooperation-dev>",
+      "name": "Debug Application",
       "request": "launch",
       "cwd": "${workspaceFolder}",
+      "mainClass": "com.tcs.denmail.online.Application",
+      "projectName": "data-cooperation",
       "console": "internalConsole",
-      "mainClass": "com.tcs.denmail.online.OnlineApplication",
-      "projectName": "online-cooperation-dev",
       "args": ""
     }
   ]

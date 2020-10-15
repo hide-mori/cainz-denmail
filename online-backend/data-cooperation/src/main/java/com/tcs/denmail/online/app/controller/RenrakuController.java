@@ -1,9 +1,9 @@
 package com.tcs.denmail.online.app.controller;
 
 import com.tcs.denmail.common.controller.TcsBaseController;
-import com.tcs.denmail.online.app.model.AtesakiCdModel;
-import com.tcs.denmail.online.domain.entity.AtesakiCdEntity;
-import com.tcs.denmail.online.domain.service.atesakicd.AtesakiCdService;
+import com.tcs.denmail.online.app.model.RenrakuModel;
+import com.tcs.denmail.online.domain.entity.RenrakuEntity;
+import com.tcs.denmail.online.domain.service.renraku.RenrakuService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -17,15 +17,16 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class RenrakuController extends TcsBaseController {
 
+
     @Autowired
-    private AtesakiCdService atesakiCdService;
+    private RenrakuService renrakuService;
 
     @RequestMapping(path = "/t-renraku", method = RequestMethod.POST)
-    public AtesakiCdEntity getRenrakuDetail(@RequestBody AtesakiCdModel atesakiCdModel) {
+    public RenrakuEntity getRenrakuDetail(@RequestBody RenrakuModel renrakuModel) {
 
-        AtesakiCdEntity atesakiCdEntity = atesakiCdService.syncData(atesakiCdModel);
+        RenrakuEntity renrakuEntity = renrakuService.syncData(renrakuModel);
 
-        return atesakiCdEntity;
+        return renrakuEntity;
     }
 
 }

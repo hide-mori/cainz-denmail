@@ -1,0 +1,8 @@
+<ion-card class="status-card" (click)="refreshList($event)">
+  <ion-card-content >
+      <div  class="flex-container_status"
+      style="background: var({{status.varcolor}})" ></div>
+      <div style="font-size: xx-small;">{{status.name}} </div>
+      <div style="text-align:center">{{status.cnt}}</div>
+  </ion-card-content>
+</ion-card>

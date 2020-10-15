@@ -1,0 +1,119 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title size="small" slot="start">{{loginInfoData.tenpoCd}} {{loginInfoData.tenpoName}}</ion-title>
+    <ion-title size="small" slot="end">{{loginInfoData.userName}}</ion-title>
+  </ion-toolbar>
+  <ion-toolbar color="secondary">
+    <ion-buttons slot="start">
+      <ion-back-button text="戻る"></ion-back-button>
+    </ion-buttons>
+    <ion-title> {{data.title}} </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content padding>
+  <div style="
+      margin-top: 0px;
+      margin-left: 0px;
+      margin-right: 0px;
+      margin-bottom: 10px;
+      padding: 10px 10px 10px 10px;
+      background-color: Menu;
+    ">
+    <h5 ion-text color="primary"></h5>
+    <h5 ion-text color="primary"></h5>
+    <h5 ion-text color="primary"></h5>
+    <ion-title size="large"> 作業期日：{{data.sagyoFromYmd | dateFormatePipe }}～{{data.sagyoToYmd | dateFormatePipe }} </ion-title>
+    <ion-title> {{data.hinban}} {{data.shudaiNm}} {{data.kenmei}}</ion-title>
+    <ion-card>
+      <ion-item>
+        <ion-label>内容</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-textarea autoGrow="true" readonly value="{{data.renrakubun}}">
+        </ion-textarea>
+      </ion-item>
+    </ion-card>
+
+    <ion-card>
+      <ion-item>
+        <ion-label>店舗作業</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label>{{data.tenpoSagyo}}</ion-label>
+      </ion-item>
+    </ion-card>
+
+    <ion-card>
+      <ion-item>
+        <ion-label>その他連絡事項</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label>{{data.sonotaRenraku}}</ion-label>
+      </ion-item>
+    </ion-card>
+
+    <ion-card>
+      <!-- List of Text Items -->
+      <ion-list>
+        <ion-item *ngFor="let file of attachmentFiles">
+          <ion-icon name="document-outline"></ion-icon>
+          <ion-label>
+            <a *ngIf="file.viewable; else filenameLabel" (click)="viewFile(file)" style="display: block; cursor: pointer;">{{file.fileName}}</a>
+            <ng-template #filenameLabel>{{file.fileName}}</ng-template>
+          </ion-label>
+        </ion-item>
+      </ion-list>
+    </ion-card>
+
+    <ion-card>
+      <ion-item>
+        <ion-label>店着日：{{data.tenchakuYmd | dateFormatePipe}}</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label>発信部署：{{data.hasshinBushoNmAll}}</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label>発信者：{{data.hasshinShainNm}}</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label>進捗状況：{{statusName}}</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label>返信：{{data.henshinYofuText}}</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label>返信期限：{{data.henshinKigenYmd | dateFormatePipe}}</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label>返信方法：{{data.chenshinHohoText}}</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label>棚割報告：{{data.tanawariYofuText}</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label>出力日：???</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label>作業開始日：{{data.sagyoFromYmd | dateFormatePipe}}</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label>作業開期日：{{data.sagyoToYmd | dateFormatePipe}}</ion-label>
+      </ion-item>
+    </ion-card>
+
+    <ion-card>
+      <ion-item>
+        <ion-label>店舗：{{data.sagyoToYmd}}</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label>宛先：{{data.dispAtesaki}}</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label>対象者：{{data.dispTaisho}}</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label>品　番：{{data.hinban}}</ion-label>
+      </ion-item>
+    </ion-card>
+  </div>
+</ion-content>

@@ -1,0 +1,637 @@
+{
+  "DMC00001E": {
+    "msgID": "DMC00001E",
+    "type": "ERROR",
+    "content": "{0}の値がありません。"
+  },
+  "DMC00002E": {
+    "msgID": "DMC00002E",
+    "type": "ERROR",
+    "content": "{0}が{1}文字を超えています。"
+  },
+  "DMC00003E": {
+    "msgID": "DMC00003E",
+    "type": "ERROR",
+    "content": "{0}は存在しない日付です。"
+  },
+  "DMC00004E": {
+    "msgID": "DMC00004E",
+    "type": "ERROR",
+    "content": "{0}に過去日は指定できません。"
+  },
+  "DMB00005E": {
+    "msgID": "DMB00005E",
+    "type": "ERROR",
+    "content": "{0}の情報が存在しません。"
+  },
+  "DMC00006E": {
+    "msgID": "DMC00006E",
+    "type": "ERROR",
+    "content": "ファイルの拡張子は、.jpg .jpeg .png .pdfのみ選択可能です。"
+  },
+  "DMC00007E": {
+    "msgID": "DMC00007E",
+    "type": "ERROR",
+    "content": "本投稿は既読済のため、編集・削除できません"
+  },
+  "DMC00008E": {
+    "msgID": "DMC00008E",
+    "type": "ERROR",
+    "content": "{0}が選択されていません。"
+  },
+  "DMC00009E": {
+    "msgID": "DMC00009E",
+    "type": "ERROR",
+    "content": "{0}が入力されていません。"
+  },
+  "DMC00010E": {
+    "msgID": "DMC00010E",
+    "type": "ERROR",
+    "content": "{0}は{1}文字以内で入力してください"
+  },
+  "DMB00011E": {
+    "msgID": "DMB00011E",
+    "type": "ERROR",
+    "content": "DB接続エラーです。システム管理者に連絡してください。"
+  },
+  "DMB00012E": {
+    "msgID": "DMB00012E",
+    "type": "ERROR",
+    "content": "IDまたはパスワードが正しくありません。もう一度入力してください。"
+  },
+  "DMB00013E": {
+    "msgID": "DMB00013E",
+    "type": "ERROR",
+    "content": "アカウントがロックされています。システム管理者に連絡してください。"
+  },
+  "DMB00014E": {
+    "msgID": "DMB00014E",
+    "type": "ERROR",
+    "content": "セッションからログイン情報を取得できませんでした。システム管理者に連絡してください。"
+  },
+  "DMF00015E": {
+    "msgID": "DMF00015E",
+    "type": "ERROR",
+    "content": "{0}を超えるファイルは投稿できません"
+  },
+  "DMF00016E": {
+    "msgID": "DMF00016E",
+    "type": "ERROR",
+    "content": "既に返信が済んでいるため、ルームステータスは更新できませんでした"
+  },
+  "DMF00017E": {
+    "msgID": "DMF00017E",
+    "type": "ERROR",
+    "content": "{0}が取得できません"
+  },
+  "DMF00018E": {
+    "msgID": "DMF00018E",
+    "type": "ERROR",
+    "content": "{0}は使用できません。"
+  },
+  "DMB00001I": {
+    "msgID": "DMB00001I",
+    "type": "INFO",
+    "content": "{0}ルームに参加しました。"
+  },
+  "DMB00002I": {
+    "msgID": "DMB00002I",
+    "type": "INFO",
+    "content": "セッションの有効期限が切れました。"
+  },
+  "DMB00003I": {
+    "msgID": "DMB00003I",
+    "type": "INFO",
+    "content": "本投稿は保険会社にて削除されました"
+  },
+  "DMB00004I": {
+    "msgID": "DMB00004I",
+    "type": "INFO",
+    "content": "本投稿は削除済です"
+  },
+  "DMB00005I": {
+    "msgID": "DMB00005I",
+    "type": "INFO",
+    "content": "進捗共有が完了しました。"
+  },
+  "DMB00006I": {
+    "msgID": "DMB00006I",
+    "type": "INFO",
+    "content": "アクティビティ連携完了しました。"
+  },
+  "DMF00007I": {
+    "msgID": "DMF00007I",
+    "type": "INFO",
+    "content": "ルームステータスが更新されました。"
+  },
+  "DMF00001F": {
+    "msgID": "DMF00001F",
+    "type": "FATAL",
+    "content": "サーバに接続できませんでした。管理者に連絡してください"
+  },
+  "DMF00001D": {
+    "msgID": "DMF00001D",
+    "type": "ERROR",
+    "content": "[操作ログ]{0} - 開始しました。"
+  },
+  "DMF00002D": {
+    "msgID": "DMF00002D",
+    "type": "ERROR",
+    "content": "[操作ログ]{0} - 終了しました。 {1}ミリ秒"
+  },
+  "DMF00019E": {
+    "msgID": "DMF00019E",
+    "type": "ERROR",
+    "content": "[エラー]{0}"
+  },
+  "FW00001E": {
+    "msgID": "FW00001E",
+    "type": "ERROR",
+    "content": "[FW00001E] {0}の値がありません。"
+  },
+  "FW00002E": {
+    "msgID": "FW00002E",
+    "type": "ERROR",
+    "content": "[FW00002E] {0}が{1}文字を超えています。"
+  },
+  "FW00003E": {
+    "msgID": "FW00003E",
+    "type": "ERROR",
+    "content": "[FW00003E] {0}は存在しない日付です。"
+  },
+  "FW00004E": {
+    "msgID": "FW00004E",
+    "type": "ERROR",
+    "content": "[FW00004E] {0}に過去日は指定できません。"
+  },
+  "FW00005E": {
+    "msgID": "FW00005E",
+    "type": "ERROR",
+    "content": "[FW00005E] {0}の情報が存在しません。"
+  },
+  "CM00001E": {
+    "msgID": "CM00001E",
+    "type": "ERROR",
+    "content": "[CM00001E] ファイルの拡張子は、.jpg .jpeg .png .pdfのみ選択可能です。"
+  },
+  "CH00001E": {
+    "msgID": "CH00001E",
+    "type": "ERROR",
+    "content": "[CH00001E] 本投稿は既読済のため、編集・削除できません"
+  },
+  "CH00002E": {
+    "msgID": "CH00002E",
+    "type": "ERROR",
+    "content": "[CH00002E] {0}が選択されていません。"
+  },
+  "FW00006E": {
+    "msgID": "FW00006E",
+    "type": "ERROR",
+    "content": "[FW00006E] {0}が入力されていません。"
+  },
+  "CM00002E": {
+    "msgID": "CM00002E",
+    "type": "ERROR",
+    "content": "[CM00002E] {0}は{1}文字以内で入力してください"
+  },
+  "FW00007E": {
+    "msgID": "FW00007E",
+    "type": "ERROR",
+    "content": "[FW00007E] DB接続エラーです。システム管理者に連絡してください。"
+  },
+  "FW00008E": {
+    "msgID": "FW00008E",
+    "type": "ERROR",
+    "content": "[FW00008E] IDまたはパスワードが正しくありません。もう一度入力してください。"
+  },
+  "FW00009E": {
+    "msgID": "FW00009E",
+    "type": "ERROR",
+    "content": "[FW00009E] アカウントがロックされています。システム管理者に連絡してください。"
+  },
+  "FW00010E": {
+    "msgID": "FW00010E",
+    "type": "ERROR",
+    "content": "[FW00010E] セッションからログイン情報を取得できませんでした。システム管理者に連絡してください。"
+  },
+  "CM00003E": {
+    "msgID": "CM00003E",
+    "type": "ERROR",
+    "content": "[CM00003E] {0}を超えるファイルは投稿できません"
+  },
+  "CH00003E": {
+    "msgID": "CH00003E",
+    "type": "ERROR",
+    "content": "[CH00003E] 既に返信が済んでいるため、ルームステータスは更新できませんでした"
+  },
+  "CM00004E": {
+    "msgID": "CM00004E",
+    "type": "ERROR",
+    "content": "[CM00004E] {0}が取得できません"
+  },
+  "CM00005E": {
+    "msgID": "CM00005E",
+    "type": "ERROR",
+    "content": "[CM00005E] お気に入りに登録済みです。"
+  },
+  "CH00001I": {
+    "msgID": "CH00001I",
+    "type": "INFO",
+    "content": "[CH00001I] {0}ルームに参加しました。"
+  },
+  "FW00001I": {
+    "msgID": "FW00001I",
+    "type": "INFO",
+    "content": "[FW00001I] セッションの有効期限が切れました。"
+  },
+  "CH00002I": {
+    "msgID": "CH00002I",
+    "type": "INFO",
+    "content": "[CH00002I] 本投稿は保険会社にて削除されました"
+  },
+  "CH00003I": {
+    "msgID": "CH00003I",
+    "type": "INFO",
+    "content": "[CH00003I] 本投稿は削除済です"
+  },
+  "CH00004I": {
+    "msgID": "CH00004I",
+    "type": "INFO",
+    "content": "[CH00004I] 進捗共有が完了しました。"
+  },
+  "FW00002I": {
+    "msgID": "FW00002I",
+    "type": "INFO",
+    "content": "[FW00002I] アクティビティ連携が完了しました。"
+  },
+  "CH00005I": {
+    "msgID": "CH00005I",
+    "type": "INFO",
+    "content": "[CH00005I] ルームステータスが更新されました。"
+  },
+  "FW00011E": {
+    "msgID": "FW00011E",
+    "type": "ERROR",
+    "content": "[FW00011E] {0}は使用できません。"
+  },
+  "FW00001F": {
+    "msgID": "FW00001F",
+    "type": "FATAL",
+    "content": "[FW00001F] サーバに接続できませんでした。管理者に連絡してください"
+  },
+  "FW00003I": {
+    "msgID": "FW00003I",
+    "type": "INFO",
+    "content": "[FW00003I] [操作ログ]{0} - 開始しました。"
+  },
+  "FW00004I": {
+    "msgID": "FW00004I",
+    "type": "INFO",
+    "content": "[FW00004I] [操作ログ]{0} - 終了しました。 {1}ミリ秒"
+  },
+  "FW00012E": {
+    "msgID": "FW00012E",
+    "type": "ERROR",
+    "content": "[FW00012E] {0}"
+  },
+  "FW00002F": {
+    "msgID": "FW00002F",
+    "type": "FATAL",
+    "content": "[FW00002F] {0}"
+  },
+  "FW00001D": {
+    "msgID": "FW00001D",
+    "type": "DEBUG",
+    "content": "[FW00001D] [デバッグ]{0}"
+  },
+  "FW00013E": {
+    "msgID": "FW00013E",
+    "type": "ERROR",
+    "content": "[FW00013E] 入力したIDのユーザ種別では利用不可能です。IDをご確認ください。"
+  },
+  "CH00004E": {
+    "msgID": "CH00004E",
+    "type": "ERROR",
+    "content": "[CH00004E] メッセージ送受信中にエラーが発生しました。再度ログインし直してください。"
+  },
+  "CH00006I": {
+    "msgID": "CH00006I",
+    "type": "INFO",
+    "content": "[CH00006I] メッセージ接続中です。しばらくお待ちください。"
+  },
+  "FW00014E": {
+    "msgID": "FW00014E",
+    "type": "ERROR",
+    "content": "[FW00014E] ファイル登録中にエラーが発生しました。{0}"
+  },
+  "FW00015E": {
+    "msgID": "FW00015E",
+    "type": "ERROR",
+    "content": "[FW00015E] ファイル取得中にエラーが発生しました。{0}"
+  },
+  "FW00016E": {
+    "msgID": "FW00016E",
+    "type": "ERROR",
+    "content": "[FW00016E] ファイル削除中にエラーが発生しました。{0}"
+  },
+  "FW00002D": {
+    "msgID": "FW00002D",
+    "type": "DEBUG",
+    "content": "[FW00002D] SPS API {0} 処理結果:{1}"
+  },
+  "CM00006E": {
+    "msgID": "CM00006E",
+    "type": "ERROR",
+    "content": "[CM00006E] {0}を超える{1}ファイルは投稿できません"
+  },
+  "CM00007E": {
+    "msgID": "CM00007E",
+    "type": "ERROR",
+    "content": "[CM00007E] ファイル登録処理中のため、しばらく経ってから再度実行してください。"
+  },
+  "FW00017E": {
+    "msgID": "FW00017E",
+    "type": "ERROR",
+    "content": "[FW00017E] {0}は{1}件より多く登録できません。"
+  },
+  "CH00007E": {
+    "msgID": "CH00007E",
+    "type": "ERROR",
+    "content": "[CH00007E] ルームオープン履歴の登録に失敗しました。ユーザID:{0}、ルームID:{1}"
+  },
+  "CH00008E": {
+    "msgID": "CH00008E",
+    "type": "ERROR",
+    "content": "[CH00008E] ルームオープン履歴の登録に失敗しました。ユーザID:{0}、ルームID:{1}"
+  },
+  "CH00007I": {
+    "msgID": "CH00007I",
+    "type": "INFO",
+    "content": "[CH00007I] {0}の投稿は保険会社にて削除されました"
+  },
+  "CH00009E": {
+    "msgID": "CH00009E",
+    "type": "ERROR",
+    "content": "[CH00009E] 半角、全角スペース、タブ、垂直タブ、改行コードのみの登録はできません。"
+  },
+  "CH00008I": {
+    "msgID": "CH00008I",
+    "type": "INFO",
+    "content": "[CH00008I] {0}のため、本機能は利用できません。"
+  },
+  "CH00010E": {
+    "msgID": "CH00010E",
+    "type": "ERROR",
+    "content": "[CH00010E] 本ルームは{0}の為、{1}はできません。再度ルームを開き直してください。"
+  },
+  "CM00008E": {
+    "msgID": "CM00008E",
+    "type": "ERROR",
+    "content": "[CM00008E] 外部IF MB更新情報連携処理に失敗しました。{0}"
+  },
+  "CM00001I": {
+    "msgID": "CM00001I",
+    "type": "INFO",
+    "content": "[CM00001I] 外部IF MB更新情報連携処理が正常終了しました。ルームID:{0}"
+  },
+  "CH00009I": {
+    "msgID": "CH00009I",
+    "type": "INFO",
+    "content": "[CH00009I] ルーム{0}が更新されました。更新内容:{1}"
+  },
+  "CM00009E": {
+    "msgID": "CM00009E",
+    "type": "ERROR",
+    "content": "[CM00009E] 同時にアップロードできるファイルの最大数は{0}です。再度ファイルを選択してください。"
+  },
+  "CH00010I": {
+    "msgID": "CH00010I",
+    "type": "INFO",
+    "content": "[CH00010I] メッセージ接続が切断されました。<br>画面を更新して再接続します。"
+  },
+  "CM00010E": {
+    "msgID": "CM00010E",
+    "type": "ERROR",
+    "content": "[CM00010E] {0}のお気に入り登録数の上限は{1}です。"
+  },
+  "CH00011I": {
+    "msgID": "CH00011I",
+    "type": "INFO",
+    "content": "[CH00011I] 本ルームは{0}の為、{1}はできません。"
+  },
+  "CH00012I": {
+    "msgID": "CH00012I",
+    "type": "INFO",
+    "content": "[CH00012I] 検索ワードに該当する投稿はありませんでした。"
+  },
+  "CH00013I": {
+    "msgID": "CH00013I",
+    "type": "INFO",
+    "content": "[CH00013I] ファイルは保険会社にて削除されました"
+  },
+  "CH00014I": {
+    "msgID": "CH00014I",
+    "type": "INFO",
+    "content": "[CH00014I] SPSからファイルが削除されています"
+  },
+  "FW00018E": {
+    "msgID": "FW00018E",
+    "type": "ERROR",
+    "content": "[FW00018E] {0}が{1}文字でありません。"
+  },
+  "FW00019E": {
+    "msgID": "FW00019E",
+    "type": "ERROR",
+    "content": "[FW00019E] {0}が{1}の形式ではありません。"
+  },
+  "FW00020E": {
+    "msgID": "FW00020E",
+    "type": "ERROR",
+    "content": "[FW00020E] {0}が有効期限切れです。"
+  },
+  "FW00021E": {
+    "msgID": "FW00021E",
+    "type": "ERROR",
+    "content": "[FW00021E] システムはメンテナンス中です。"
+  },
+  "CM00011E": {
+    "msgID": "CM00011E",
+    "type": "ERROR",
+    "content": "[CM00011E] ファイルの拡張子は、.jpg .jpeg .png .pdf .xls .xlsx .doc .docx .rtf .ppt .pptx のみ選択可能です。"
+  },
+  "CM00012E": {
+    "msgID": "CM00012E",
+    "type": "ERROR",
+    "content": "[CM00012E] 外部IF API 実行中にエラーが発生しました。{0}"
+  },
+  "CM00013E": {
+    "msgID": "CM00013E",
+    "type": "ERROR",
+    "content": "[CM00013E] ファイルの形式はJPG、JPEG、PNG、PDFのみ選択可能です。"
+  },
+  "CM00014E": {
+    "msgID": "CM00014E",
+    "type": "ERROR",
+    "content": "[CM00014E] 送信可能なファイルのサイズ・ページ数の上限値を超えています。 <br>詳細は以下URLをご確認ください。<br>{0}"
+  },
+  "CM00015E": {
+    "msgID": "CM00015E",
+    "type": "ERROR",
+    "content": "[CM00015E] 入力した文書に不適切なワードが含まれています。"
+  },
+  "FW00005I": {
+    "msgID": "FW00005I",
+    "type": "INFO",
+    "content": "[FW00005I] 送信メール内容をログにリダイレクト。{0}"
+  },
+  "CM00016E": {
+    "msgID": "CM00016E",
+    "type": "ERROR",
+    "content": "[CM00016E] 汎用マスタに既に登録済です。"
+  },
+  "CM00002I": {
+    "msgID": "CM00002I",
+    "type": "INFO",
+    "content": "[CM00002I] 汎用マスタへの登録が完了しました。カテゴリID:{0} コードID:{1}"
+  },
+  "CM00003I": {
+    "msgID": "CM00003I",
+    "type": "INFO",
+    "content": "[CM00003I] 汎用マスタへの編集が完了しました。カテゴリID:{0} コードID:{1}"
+  },
+  "CM00004I": {
+    "msgID": "CM00004I",
+    "type": "INFO",
+    "content": "[CM00004I] 汎用マスタへの削除が完了しました。カテゴリID:{0} コードID:{1}"
+  },
+  "CM00017E": {
+    "msgID": "CM00017E",
+    "type": "ERROR",
+    "content": "[CM00017E] お気に入りカテゴリ登録数の上限は{0}です。"
+  },
+  "CM00018E": {
+    "msgID": "CM00018E",
+    "type": "ERROR",
+    "content": "[CM00018E] ファイル形式と拡張子が一致しません。"
+  },
+  "CM00019E": {
+    "msgID": "CM00019E",
+    "type": "ERROR",
+    "content": "[CM00019E] URLが不正です。"
+  },
+  "CM00020E": {
+    "msgID": "CM00020E",
+    "type": "ERROR",
+    "content": "[CM00020E] ファイルの拡張子は、.jpg .jpeg .png のみ選択可能です。"
+  },
+  "FW00007I": {
+    "msgID": "FW00007I",
+    "type": "INFO",
+    "content": "[FW00007I] {0}の情報が存在しません。"
+  },
+  "CM00021E": {
+    "msgID": "CM00021E",
+    "type": "ERROR",
+    "content": "[CM00021E] ファイル取得エラーのため、しばらく経ってから再度実行してください。"
+  },
+  "CM00022E": {
+    "msgID": "CM00022E",
+    "type": "ERROR",
+    "content": "[CM00022E] {0}で入力してください。"
+  },
+  "FW00010I": {
+    "msgID": "FW00010I",
+    "type": "INFO",
+    "content": "[FW00010I] Cognitoセッショントークン：{0}"
+  },
+  "FW00011I": {
+    "msgID": "FW00011I",
+    "type": "INFO",
+    "content": "[FW00011I] ユーザID：{0}"
+  },
+  "CM00023E": {
+    "msgID": "CM00023E",
+    "type": "ERROR",
+    "content": "[CM00023E]「MB監査メール送信先」を設定後ご利用下さい。"
+  },
+  "FW00023E": {
+    "msgID": "FW00023E",
+    "type": "ERROR",
+    "content": "[FW00023E] ファイルのサイズが0です。"
+  },
+  "FW00024E": {
+    "msgID": "FW00024E",
+    "type": "ERROR",
+    "content": "[FW00024E] {0}を超えるファイルは選択できません。"
+  },
+  "FW00025E": {
+    "msgID": "FW00025E",
+    "type": "ERROR",
+    "content": "[FW00025E] ファイルの形式が{0}ではありません。"
+  },
+  "FW00026E": {
+    "msgID": "FW00026E",
+    "type": "ERROR",
+    "content": "[FW00026E] インポートするデータがありません。"
+  },
+  "FW00027E": {
+    "msgID": "FW00027E",
+    "type": "ERROR",
+    "content": "[FW00027E] {0}行目：{1}列目以降に入力されています。"
+  },
+  "FW00028E": {
+    "msgID": "FW00028E",
+    "type": "ERROR",
+    "content": "[FW00028E] {0}行目：ヘッダーの内容が不正です。"
+  },
+  "FW00029E": {
+    "msgID": "FW00029E",
+    "type": "ERROR",
+    "content": "[FW00029E] {0}行目：{1}は{2}文字以内で入力してください。"
+  },
+  "FW00030E": {
+    "msgID": "FW00030E",
+    "type": "ERROR",
+    "content": "[FW00030E] {0}行目：{1}が入力されていません。"
+  },
+  "FW00031E": {
+    "msgID": "FW00031E",
+    "type": "ERROR",
+    "content": "[FW00031E] ファイルの読み込み時にエラーが発生しました。エクスポートされたファイルを編集してインポートしてください。"
+  },
+  "FW00032E": {
+    "msgID": "FW00032E",
+    "type": "ERROR",
+    "content": "[FW00032E] {0}は{1}件までです。"
+  },
+  "FW00012I": {
+    "msgID": "FW00012I",
+    "type": "INFO",
+    "content": "[FW00012I] {0}が完了しました。"
+  },
+  "FW00013I": {
+    "msgID": "FW00013I",
+    "type": "INFO",
+    "content": "[FW00013I] {0}行目：CSVに出力できない文字を?に変換してエクスポートしました。"
+  },
+  "CM00024E": {
+    "msgID": "CM00024E",
+    "type": "ERROR",
+    "content": "[CM00024E] 未分類カテゴリの編集・削除・移動はできません。"
+  },
+  "CM00025E": {
+    "msgID": "CM00025E",
+    "type": "ERROR",
+    "content": "[CM00025E] 同じ名前のカテゴリが存在するため登録できません。"
+  },
+  "CH00015I": {
+    "msgID": "CH00015I",
+    "type": "INFO",
+    "content": "[CH00015I] ルーム未開設の事案への代理店参照・社員参照によるアクセスです。"
+  },
+  "FW00033E": {
+    "msgID": "FW00033E",
+    "type": "ERROR",
+    "content": "[FW00033E] SQSとの連携にエラーが発生しました。{0}"
+  }
+}

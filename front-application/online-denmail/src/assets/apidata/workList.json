@@ -1,0 +1,278 @@
+{
+    "unread" : 0,
+    "workingCnt" : 0,
+    "workerCompleted" : 0,
+    "workerExcluded" : 0,
+    "excluded" : 0,
+    "completed" : 9,
+    
+    "errorCode" : "",
+    "errorMsg" : "",
+
+    "itemList": [
+       {
+            "kannriNo": "999999991",
+            "sagyoFromYmd": "2020/10/10",
+            "sagyoToYmd": "2020/10/14",
+            "shudaiCd": "1234",
+            "hinban" : "#03",
+            "shudaiNm": "【企画情報】",
+            "kenmei" :"初売り展示品処分セールについて",
+            "statusNm": "未読",
+            "statusId": "1"
+        },
+        {
+            "kannriNo": "999999992",
+            "sagyoFromYmd": "2020/10/11",
+            "sagyoToYmd": "2020/10/15",
+            "shudaiCd": "1234",
+            "hinban" : "#03",
+            "shudaiNm": "【展開指示】",
+            "kenmei" :"AWワーキング端境期の展開（２４店舗）",
+            "statusNm": "未読",
+            "statusId": "1"
+        },
+        {
+            "kannriNo": "999999993",
+            "sagyoFromYmd": "2020/10/12",
+            "sagyoToYmd": "2020/10/16",
+            "shudaiCd": "1234",
+            "hinban" : "#03",
+            "shudaiNm": "【企画情報】",
+            "kenmei" :"初売り展示品処分セールについて",
+            "statusNm": "作業中",
+            "statusId": "2"
+        },
+        {
+            "kannriNo": "999999994",
+            "sagyoFromYmd": "2020/10/13",
+            "sagyoToYmd": "2020/10/16",
+            "shudaiCd": "1234",
+            "hinban" : "#03",
+            "shudaiNm": "【展開指示】",
+            "kenmei" :"AWワーキング端境期の展開（２４店舗）",
+            "statusNm": "作業中",
+            "statusId": "2"
+        },
+        {
+            "kannriNo": "999999995",
+            "sagyoFromYmd": "2020/10/11",
+            "sagyoToYmd": "2020/10/17",
+            "shudaiCd": "1234",
+            "hinban" : "#03",
+            "shudaiNm": "【企画情報】",
+            "kenmei" :"初売り展示品処分セールについて",
+            "statusNm": "作業者完了",
+            "statusId": "3"
+        },
+        {
+            "kannriNo": "999999996",
+            "sagyoFromYmd": "2020/10/13",
+            "sagyoToYmd": "2020/10/18",
+            "shudaiCd": "1234",
+            "hinban" : "#03",
+            "shudaiNm": "【展開指示】",
+            "kenmei" :"AWワーキング端境期の展開（２４店舗）未読 作業中 作業者完了 作業者対象外 完了",
+            "statusNm": "作業者完了",
+            "statusId": "3"
+        },
+        {
+            "kannriNo": "999999997",
+            "sagyoFromYmd": "2020/10/15",
+            "sagyoToYmd": "2020/10/19",
+            "shudaiCd": "1234",
+            "hinban" : "#03",
+            "shudaiNm": "【企画情報】",
+            "kenmei" :"初売り展示品処分セールについて",
+            "statusNm": "作業者対象外",
+            "statusId": "4"
+        },
+        {
+            "kannriNo": "999999998",
+            "sagyoFromYmd": "2020/10/16",
+            "sagyoToYmd": "2020/10/20",
+            "shudaiCd": "1234",
+            "hinban" : "#03",
+            "shudaiNm": "【展開指示】",
+            "kenmei" :"AWワーキング端境期の展開（２４店舗）未読 作業中 作業者完了 作業者対象外 対象外 完了",
+            "statusNm": "作業者対象外",
+            "statusId": "4"
+        },
+        {
+            "kannriNo": "999999999",
+            "sagyoFromYmd": "2020/10/17",
+            "sagyoToYmd": "2020/10/21",
+            "shudaiCd": "1234",
+            "hinban" : "#03",
+            "shudaiNm": "【企画情報】",
+            "kenmei" :"初売り展示品処分セールについて",
+            "statusNm": "対象外",
+            "statusId": "5"
+        },
+        {
+            "kannriNo": "999999910",
+            "sagyoFromYmd": "2020/10/18",
+            "sagyoToYmd": "2020/10/22",
+            "shudaiCd": "1234",
+            "hinban" : "#03",
+            "shudaiNm": "【展開指示】",
+            "kenmei" :"AWワーキング端境期の展開（２４店舗）未読 作業中 作業者完了 作業者対象外 対象外 完了",
+            "statusNm": "対象外",
+            "statusId": "5"
+        },
+        {
+            "kannriNo": "999999911",
+            "sagyoFromYmd": "2020/10/19",
+            "sagyoToYmd": "2020/10/23",
+            "shudaiCd": "1234",
+            "hinban" : "#03",
+            "shudaiNm": "【企画情報】",
+            "kenmei" :"初売り展示品処分セールについて",
+            "statusNm": "完了",
+            "statusId": "6"
+        },
+        {
+            "kannriNo": "999999912",
+            "sagyoFromYmd": "2020/10/20",
+            "sagyoToYmd": "2020/10/24",
+            "shudaiCd": "1234",
+            "hinban" : "#03",
+            "shudaiNm": "【展開指示】",
+            "kenmei" :"AWワーキング端境期の展開（２４店舗）未読 作業中 作業者完了 作業者対象外 対象外 完了",
+            "statusNm": "完了",
+            "statusId": "6"
+        },
+        {
+            "kannriNo": "999999801",
+            "sagyoFromYmd": "2020/11/10",
+            "sagyoToYmd": "2020/11/14",
+            "shudaiCd": "1234",
+            "hinban" : "#03",
+            "shudaiNm": "【企画情報】",
+            "kenmei" :"初売り展示品処分セールについて",
+            "statusNm": "未読",
+            "statusId": "1"
+        },
+        {
+            "kannriNo": "999999802",
+            "sagyoFromYmd": "2020/11/11",
+            "sagyoToYmd": "2020/11/15",
+            "shudaiCd": "1234",
+            "hinban" : "#03",
+            "shudaiNm": "【展開指示】",
+            "kenmei" :"AWワーキング端境期の展開（２４店舗）",
+            "statusNm": "未読",
+            "statusId": "1"
+        },
+        {
+            "kannriNo": "999999803",
+            "sagyoFromYmd": "2020/11/12",
+            "sagyoToYmd": "2020/11/16",
+            "shudaiCd": "1234",
+            "hinban" : "#03",
+            "shudaiNm": "【企画情報】",
+            "kenmei" :"初売り展示品処分セールについて",
+            "statusNm": "作業中",
+            "statusId": "2"
+        },
+        {
+            "kannriNo": "999999804",
+            "sagyoFromYmd": "2020/11/13",
+            "sagyoToYmd": "2020/11/16",
+            "shudaiCd": "1234",
+            "hinban" : "#03",
+            "shudaiNm": "【展開指示】",
+            "kenmei" :"AWワーキング端境期の展開（２４店舗）",
+            "statusNm": "作業中",
+            "statusId": "2"
+        },
+        {
+            "kannriNo": "999999805",
+            "sagyoFromYmd": "2020/11/11",
+            "sagyoToYmd": "2020/11/17",
+            "shudaiCd": "1234",
+            "hinban" : "#03",
+            "shudaiNm": "【企画情報】",
+            "kenmei" :"初売り展示品処分セールについて",
+            "statusNm": "作業者完了",
+            "statusId": "3"
+        },
+        {
+            "kannriNo": "999999806",
+            "sagyoFromYmd": "2020/11/13",
+            "sagyoToYmd": "2020/11/18",
+            "shudaiCd": "1234",
+            "hinban" : "#03",
+            "shudaiNm": "【展開指示】",
+            "kenmei" :"AWワーキング端境期の展開（２４店舗）未読 作業中 作業者完了 作業者対象外 完了",
+            "statusNm": "作業者完了",
+            "statusId": "3"
+        },
+        {
+            "kannriNo": "999999807",
+            "sagyoFromYmd": "2020/11/15",
+            "sagyoToYmd": "2020/11/19",
+            "shudaiCd": "1234",
+            "hinban" : "#03",
+            "shudaiNm": "【企画情報】",
+            "kenmei" :"初売り展示品処分セールについて",
+            "statusNm": "作業者対象外",
+            "statusId": "4"
+        },
+        {
+            "kannriNo": "999999808",
+            "sagyoFromYmd": "2020/11/16",
+            "sagyoToYmd": "2020/12/20",
+            "shudaiCd": "1234",
+            "hinban" : "#03",
+            "shudaiNm": "【展開指示】",
+            "kenmei" :"AWワーキング端境期の展開（２４店舗）未読 作業中 作業者完了 作業者対象外 対象外 完了",
+            "statusNm": "作業者対象外",
+            "statusId": "4"
+        },
+        {
+            "kannriNo": "999999809",
+            "sagyoFromYmd": "2020/11/17",
+            "sagyoToYmd": "2020/11/21",
+            "shudaiCd": "1234",
+            "hinban" : "#03",
+            "shudaiNm": "【企画情報】",
+            "kenmei" :"初売り展示品処分セールについて",
+            "statusNm": "対象外",
+            "statusId": "5"
+        },
+        {
+            "kannriNo": "999999800",
+            "sagyoFromYmd": "2020/11/18",
+            "sagyoToYmd": "2020/11/22",
+            "shudaiCd": "1234",
+            "hinban" : "#03",
+            "shudaiNm": "【展開指示】",
+            "kenmei" :"AWワーキング端境期の展開（２４店舗）未読 作業中 作業者完了 作業者対象外 対象外 完了",
+            "statusNm": "対象外",
+            "statusId": "5"
+        },
+        {
+            "kannriNo": "999999811",
+            "sagyoFromYmd": "2020/11/19",
+            "sagyoToYmd": "2020/11/23",
+            "shudaiCd": "1234",
+            "hinban" : "#03",
+            "shudaiNm": "【企画情報】",
+            "kenmei" :"初売り展示品処分セールについて",
+            "statusNm": "完了",
+            "statusId": "6"
+        },
+        {
+            "kannriNo": "999999812",
+            "sagyoFromYmd": "2020/11/20",
+            "sagyoToYmd": "2020/11/24",
+            "shudaiCd": "1234",
+            "hinban" : "#03",
+            "shudaiNm": "【展開指示】",
+            "kenmei" :"AWワーキング端境期の展開（２４店舗）未読 作業中 作業者完了 作業者対象外 対象外 完了",
+            "statusNm": "完了",
+            "statusId": "6"
+        }
+    ]
+}

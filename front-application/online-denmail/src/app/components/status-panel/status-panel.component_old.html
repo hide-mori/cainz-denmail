@@ -1,0 +1,52 @@
+<ion-title>
+  <ion-grid>
+    <ion-row>
+      <ion-col class="flex-container_child">
+        <div
+          class="flex-container_status"
+          style="background: var(--ion-color-status_unread)"
+        >        </div>
+        <div>未読</div>
+        <div>{{ categoriesCnt.a1 }}</div>
+      </ion-col>
+      <ion-col class="flex-container_child">
+        <div
+        class="flex-container_status"
+        style="background: var(--ion-color-status_working)"
+      ></div>
+        <div>作業中</div>
+        <div>{{ categoriesCnt.a2 }}</div>
+      </ion-col>
+      <ion-col class="flex-container_child">
+        <div         
+        class="flex-container_status"
+        style="background: var(--ion-color-status_worker_completed)"></div>
+        <div>作業者完了</div>
+        <div>{{ categoriesCnt.a3 }}</div>
+      </ion-col>
+      <ion-col class="flex-container_child">
+        <div class="flex-container_status"
+        style="background: var(--ion-color-status_worker_excluded)"></div>
+        <div>
+          作業者<br />
+          対象外
+        </div>
+        <div>{{ categoriesCnt.a4 }}</div>
+      </ion-col>
+      <ion-col class="flex-container_child">
+        <div
+        class="flex-container_status"
+        style="background: var(--ion-color-status_excluded)"></div>
+        <div>対象外</div>
+        <div>{{ categoriesCnt.a5 }}</div>
+      </ion-col>
+      <ion-col class="flex-container_child">
+        <div
+        class="flex-container_status"
+        style="background: var(--ion-color-status_completed)"></div>
+        <div>完了</div>
+        <div>{{ categoriesCnt.a6 }}</div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-title>

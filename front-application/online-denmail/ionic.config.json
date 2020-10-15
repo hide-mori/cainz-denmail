@@ -1,0 +1,7 @@
+{
+  "name": "denmail",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

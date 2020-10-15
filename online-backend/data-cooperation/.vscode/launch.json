@@ -1,0 +1,26 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "java",
+      "name": "Debug (Launch)-OnlineApplication<online>",
+      "request": "launch",
+      "mainClass": "com.tcs.denmail.online.OnlineApplication",
+      "projectName": "online-cooperation-dev",
+      "console": "internalConsole"
+    },
+    {
+      "type": "java",
+      "name": "Spring Boot-OnlineApplication<online-cooperation-dev>",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "console": "internalConsole",
+      "mainClass": "com.tcs.denmail.online.OnlineApplication",
+      "projectName": "online-cooperation-dev",
+      "args": ""
+    }
+  ]
+}

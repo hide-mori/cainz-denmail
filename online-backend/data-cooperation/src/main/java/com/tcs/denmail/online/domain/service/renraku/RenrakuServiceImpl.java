@@ -1,5 +1,6 @@
 package com.tcs.denmail.online.domain.service.renraku;
 
+import com.tcs.denmail.common.service.TcsBaseService;
 import com.tcs.denmail.online.app.model.RenrakuModel;
 import com.tcs.denmail.online.domain.condition.RealTimeLinkDeleteFlg;
 import com.tcs.denmail.online.domain.entity.RenrakuEntity;
@@ -10,7 +11,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 @Service
-public class RenrakuServiceImpl implements RenrakuService {
+public class RenrakuServiceImpl extends TcsBaseService implements RenrakuService {
 
     @Autowired
     private RenrakuRepository renrakuRepository;

@@ -1,6 +1,7 @@
 package com.tcs.denmail.online.domain.service.shudai;
 
 import java.util.Optional;
+import com.tcs.denmail.common.service.TcsBaseService;
 import com.tcs.denmail.online.app.model.ShudaiModel;
 import com.tcs.denmail.online.domain.condition.RealTimeLinkDeleteFlg;
 import com.tcs.denmail.online.domain.entity.ShudaiEntity;
@@ -10,7 +11,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 @Service
-public class ShudaiServiceImpl implements ShudaiService {
+public class ShudaiServiceImpl extends TcsBaseService implements ShudaiService {
 
     @Autowired
     private ShudaiRepository shudaiRepository;

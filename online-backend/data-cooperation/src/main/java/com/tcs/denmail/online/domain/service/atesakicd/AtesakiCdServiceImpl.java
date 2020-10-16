@@ -1,5 +1,6 @@
 package com.tcs.denmail.online.domain.service.atesakicd;
 
+import com.tcs.denmail.common.service.TcsBaseService;
 import com.tcs.denmail.online.app.model.AtesakiCdModel;
 import com.tcs.denmail.online.domain.condition.RealTimeLinkDeleteFlg;
 import com.tcs.denmail.online.domain.entity.AtesakiCdEntity;
@@ -9,7 +10,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 @Service
-public class AtesakiCdServiceImpl implements AtesakiCdService {
+public class AtesakiCdServiceImpl extends TcsBaseService implements AtesakiCdService {
 
     @Autowired
     private AtesakiCdRepository atesakiCdRepository;

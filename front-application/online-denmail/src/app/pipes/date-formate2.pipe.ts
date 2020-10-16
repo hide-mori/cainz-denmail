@@ -1,9 +1,9 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
-  name: 'dateFormatePipe'
+  name: 'dateFormate2Pipe'
 })
-export class DateFPipe implements PipeTransform {
+export class DateF2Pipe implements PipeTransform {
 
   transform(value: string) {
 

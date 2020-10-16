@@ -8,7 +8,7 @@ import { RenrakuDetailPageRoutingModule } from './renraku-detail-routing.module'
 
 import { RenrakuDetailPage } from './renraku-detail.page';
 
-import {DateFPipe} from '../../pipes/date-formate.pipe';
+import {DateF2Pipe} from '../../pipes/date-formate2.pipe';
 
 @NgModule({
   imports: [
@@ -17,6 +17,6 @@ import {DateFPipe} from '../../pipes/date-formate.pipe';
     IonicModule,
     RenrakuDetailPageRoutingModule
   ],
-  declarations: [RenrakuDetailPage, DateFPipe]
+  declarations: [RenrakuDetailPage, DateF2Pipe]
 })
 export class RenrakuDetailPageModule {}

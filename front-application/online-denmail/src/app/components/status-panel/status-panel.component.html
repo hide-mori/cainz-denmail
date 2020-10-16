@@ -1,12 +1,12 @@
 <ion-grid>
   <ion-row>
     <ion-col class="ion-no-padding" *ngFor="let status of statusArr">
-      <ion-card class="status-card" (click)="selectOneStatusItem($event, status)">
+      <ion-card class="status-card ion-no-margin" (click)="selectOneStatusItem($event, status)">
         <ion-card-content >
             <div  class="flex-container_status"
             style="background: var({{status.varcolor}})" ></div>
-            <div  style="font-size:smaller" >{{status.name}}</div>
-            <div  style="font-size:smaller" >{{status.name1}}</div>
+            <div  style="font-size:medium" >{{status.name}}</div>
+            <div  style="font-size:medium" >{{status.name1}}</div>
             <div>{{status.cnt}}</div>
         </ion-card-content>
       </ion-card>

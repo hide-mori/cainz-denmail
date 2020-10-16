@@ -7,7 +7,7 @@
     <ion-title slot="start">連絡文書一覧</ion-title>
   </ion-toolbar>
   <ion-toolbar>
-    <ion-title>
+    <ion-title class="ion-no-padding">
       <app-status-panel [statusArr]="statusArr" (result)="ngOnChanges($event)"></app-status-panel>
    </ion-title>
   </ion-toolbar>
@@ -19,7 +19,7 @@
         <ion-card class="work-card">
           <ion-card-content>
             <ion-item detail="false" lines="none" class="work-item" routerLink="/renraku-detail/{{work.kanriNo}}/{{work.statusId}}">
-              <div class="vertical-bar" style="background: var({{work.statusBgVarColor}})"></div>
+              <div class="vertical-bar ion-no-margin" style="background: var({{work.statusBgVarColor}})"></div>
               <div class="vertical-bar_left"></div>
               <ion-label>
                 <h2>作業期日：{{work.sagyoFromYmd | dateFormatePipe }} ～ {{work.sagyoToYmd | dateFormatePipe }} </h2>

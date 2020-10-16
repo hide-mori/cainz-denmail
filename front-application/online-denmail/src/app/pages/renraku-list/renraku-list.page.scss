@@ -1,11 +1,12 @@
+$work-item-height: 110px;
 .vertical-bar{
     width: 30px;
-    height: 75px;
+    height: $work-item-height;
     border-radius: 15px;
 }
 .vertical-bar_left {
   width: 5px;
-  height: 75px;
+  height: $work-item-height;
 }
 
 .work-card {
@@ -28,13 +29,13 @@
   }
   
   .work-card .work-item h2 {
-    font-size: medium;
+    font-size: larger;
     font-weight: 500;
     letter-spacing: 0.02em;
   }
   
   .work-card .work-item p {
-    font-size: large;
+    font-size: larger;
     letter-spacing: 0.02em;
   }
   

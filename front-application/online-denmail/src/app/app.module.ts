@@ -13,7 +13,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { FileViewerComponent } from './components/file-viewer/file-viewer.component';
 
 @NgModule({
-  declarations: [AppComponent, FileViewerComponent],
+  declarations: [
+     AppComponent,
+     FileViewerComponent],
   entryComponents: [],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, HttpClientModule, PdfViewerModule],
   providers: [

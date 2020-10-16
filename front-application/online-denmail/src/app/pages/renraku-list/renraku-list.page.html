@@ -20,7 +20,7 @@
           <ion-card-content>
             <ion-item detail="false" lines="none" class="work-item" routerLink="/renraku-detail/{{work.kanriNo}}/{{work.statusId}}">
               <div class="vertical-bar" style="background: var({{work.statusBgVarColor}})"></div>
-              <!-- <div class="vertical-bar_left"></div> -->
+              <div class="vertical-bar_left"></div>
               <ion-label>
                 <h2>作業期日：{{work.sagyoFromYmd | dateFormatePipe }} ～ {{work.sagyoToYmd | dateFormatePipe }} </h2>
                 <p>{{work.hinban}}{{work.shudaiNm}}{{work.kenmei}}</p>

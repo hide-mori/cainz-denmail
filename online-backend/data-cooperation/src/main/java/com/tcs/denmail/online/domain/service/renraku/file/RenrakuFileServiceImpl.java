@@ -1,28 +1,26 @@
-package com.tcs.denmail.online.domain.service.renraku.jokyo;
+package com.tcs.denmail.online.domain.service.renraku.file;
 
 import com.tcs.denmail.common.service.TcsBaseService;
-import com.tcs.denmail.online.app.model.RenrakuJokyoModel;
+import com.tcs.denmail.online.app.model.RenrakuFileModel;
 import com.tcs.denmail.online.domain.condition.RealTimeLinkDeleteFlg;
-import com.tcs.denmail.online.domain.entity.RenrakuJokyoEntity;
-import com.tcs.denmail.online.domain.repository.RenrakuJokyoRepository;
-import org.springframework.beans.BeanUtils;
+import com.tcs.denmail.online.domain.entity.RenrakuFileEntity;
+import com.tcs.denmail.online.domain.repository.RenrakuFileRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 @Service
-public class RenrakuJokyoServiceImpl extends TcsBaseService implements RenrakuJokyoService {
+public class RenrakuFileServiceImpl extends TcsBaseService implements RenrakuFileService {
 
     @Autowired
-    private RenrakuJokyoRepository repository;
+    private RenrakuFileRepository repository;
 
     @Transactional
     @Override
-    public RenrakuJokyoEntity syncData(RenrakuJokyoModel in) {
+    public RenrakuFileEntity syncData(RenrakuFileModel in) {
         ReturnValue returnValue = new ReturnValue();
 
-        RenrakuJokyoEntity.Pk pk =
-                new RenrakuJokyoEntity.Pk(in.getKanriNo(), in.getAtesakiTenpoCd());
+        RenrakuFileEntity.Pk pk = new RenrakuFileEntity.Pk(in.getKanriNo(), in.getRenNo());
 
         switch (in.getRealTimeLinkDeleteFlg()) {
             // INSERT_UPDATE
@@ -30,11 +28,13 @@ public class RenrakuJokyoServiceImpl extends TcsBaseService implements RenrakuJo
                 // DBよりデータを取得(キー値)
 
                 repository.findById(pk).ifPresentOrElse(entity -> {
-                    BeanUtils.copyProperties(in, entity);
+                    entity.setFileName(in.getFileName());
                     returnValue.entity = repository.saveAndFlush(entity);
                 }, () -> {
-                    RenrakuJokyoEntity entity = new RenrakuJokyoEntity();
-                    BeanUtils.copyProperties(in, entity);
+                    RenrakuFileEntity entity = new RenrakuFileEntity();
+                    entity.setKanriNo(in.getKanriNo());
+                    entity.setRenNo(in.getRenNo());
+                    entity.setFileName(in.getFileName());
                     returnValue.entity = repository.saveAndFlush(entity);
                 });
                 break;
@@ -56,7 +56,6 @@ public class RenrakuJokyoServiceImpl extends TcsBaseService implements RenrakuJo
     }
 
     class ReturnValue {
-        RenrakuJokyoEntity entity = new RenrakuJokyoEntity();
+        RenrakuFileEntity entity = new RenrakuFileEntity();
     }
-
 }

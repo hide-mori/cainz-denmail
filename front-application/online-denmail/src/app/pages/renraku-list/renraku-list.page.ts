@@ -49,6 +49,9 @@ export class RenrakuListPage implements OnInit, OnChanges {
     private router: Router, private activatedRoute:ActivatedRoute, 
     private authService: AuthService) {}
 
+  titleBackGroundColor() {
+    return "#387ef5";
+  }
   ngOnInit() {
     this.statusArr = StatusUtility.getStatusArr();
     this.loginInfoData = new Login();

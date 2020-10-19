@@ -1,4 +1,10 @@
+
 $work-item-height: 110px;
+
+.renraku-toolbar{
+  --background: var(--ion-color-renraku_toolbar_bg);
+}
+
 .vertical-bar{
     width: 30px;
     height: $work-item-height;
@@ -15,9 +21,10 @@ $work-item-height: 110px;
   }
   
   /* Due to the fact the cards are inside of columns the margins don't overlap
-   * properly so we want to remove the extra margin between cards
+   * properly so we want to remove the extra margin between cards   
+   * ion-col:not(:last-of-type) .work-card
    */
-  ion-col:not(:last-of-type) .work-card {
+  ion-col .work-card {
     margin-top: 4px;
     margin-right: 4px;
     margin-left: 0px;

@@ -29,14 +29,17 @@ $work-item-height: 110px;
   }
   
   .work-card .work-item h2 {
-    font-size: larger;
+    font-size: large;
     font-weight: 500;
     letter-spacing: 0.02em;
+    line-height:1.4em;
   }
   
   .work-card .work-item p {
-    font-size: larger;
+    font-size: x-large;
     letter-spacing: 0.02em;
+    line-height:1.4em;
+    white-space: pre-wrap;
   }
   
   .work-card ion-card-header {

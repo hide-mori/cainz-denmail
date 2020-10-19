@@ -18,11 +18,11 @@
       <ion-col class="ion-no-padding" *ngFor="let work of workList">
         <ion-card class="work-card">
           <ion-card-content>
-            <ion-item detail="false" lines="none" class="work-item" routerLink="/renraku-detail/{{work.kanriNo}}/{{work.statusId}}">
+            <ion-item detail="false" lines="none" class="ion-no-padding work-item" routerLink="/renraku-detail/{{work.kanriNo}}/{{work.statusId}}">
               <div class="vertical-bar" style="background: var({{work.statusBgVarColor}})"></div>
               <div class="vertical-bar_left"></div>
               <ion-label>
-                <h2>作業期日：{{work.sagyoFromYmd | dateFormatePipe }} ～ {{work.sagyoToYmd | dateFormatePipe }} </h2>
+                <h2>作業期日：{{work.sagyoFromYmd | dateFormatePipe }}～{{work.sagyoToYmd | dateFormatePipe }}</h2>
                 <p>{{work.hinban}}{{work.shudaiNm}}{{work.kenmei}}</p>
               </ion-label>
             </ion-item>

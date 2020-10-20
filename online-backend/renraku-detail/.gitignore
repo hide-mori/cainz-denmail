@@ -31,5 +31,7 @@ out/
 /.nb-gradle/
 
 ### VS Code ###
-.vscode/
 bin/
+.vscode/
+.classpath
+.project

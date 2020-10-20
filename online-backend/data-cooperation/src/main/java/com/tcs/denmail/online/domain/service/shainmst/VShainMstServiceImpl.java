@@ -1,56 +1,52 @@
-package com.tcs.denmail.online.domain.service.shudai;
+package com.tcs.denmail.online.domain.service.shainmst;
 
 import java.util.List;
 import java.util.Optional;
 import com.tcs.denmail.common.service.TcsBaseService;
 import com.tcs.denmail.online.app.model.CooperationResponseModel;
-import com.tcs.denmail.online.app.model.ShudaiModel;
+import com.tcs.denmail.online.app.model.VShainMstModel;
 import com.tcs.denmail.online.domain.condition.RealTimeLinkDeleteFlg;
-import com.tcs.denmail.online.domain.entity.ShudaiEntity;
-import com.tcs.denmail.online.domain.repository.ShudaiRepository;
+import com.tcs.denmail.online.domain.entity.VShainMstEntity;
+import com.tcs.denmail.online.domain.repository.VShainMstRepository;
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 @Service
-public class ShudaiServiceImpl extends TcsBaseService implements ShudaiService {
+public class VShainMstServiceImpl extends TcsBaseService implements VShainMstService {
 
     @Autowired
-    private ShudaiRepository shudaiRepository;
+    private VShainMstRepository repository;
 
     @Transactional
     @Override
-    public CooperationResponseModel syncData(List<ShudaiModel> dataList) {
-
+    public CooperationResponseModel syncData(List<VShainMstModel> dataList) {
         CooperationResponseModel returnValue = new CooperationResponseModel();
 
-        for (ShudaiModel data : dataList) {
+        for (VShainMstModel data : dataList) {
 
             switch (data.getRealTimeLinkDeleteFlg()) {
                 // INSERT_UPDATE
                 case RealTimeLinkDeleteFlg.INSERT_UPDATE:
                     // DBよりデータを取得(キー値)
-                    Optional<ShudaiEntity> find = shudaiRepository.findById(data.getShudaiCd());
-                    find.ifPresentOrElse(entity -> {
+                    repository.findById(data.getShainCd()).ifPresentOrElse(entity -> {
                         // UPDATE
-                        entity.setShudaiNm(data.getShudaiNm());
-                        entity.setDispFlg(data.getDispFlg());
-                        shudaiRepository.save(entity);
+                        BeanUtils.copyProperties(data, entity);
+                        repository.save(entity);
                         returnValue.updateCount++;
                     }, () -> {
                         // INSERT
-                        ShudaiEntity entity = new ShudaiEntity();
-                        entity.setShudaiCd(data.getShudaiCd());
-                        entity.setShudaiNm(data.getShudaiNm());
-                        entity.setDispFlg(data.getDispFlg());
-                        shudaiRepository.save(entity);
+                        VShainMstEntity entity = new VShainMstEntity();
+                        BeanUtils.copyProperties(data, entity);
+                        repository.save(entity);
                         returnValue.insertCount++;
                     });
                     break;
                 // DELETE
                 case RealTimeLinkDeleteFlg.DELETE:
-                    shudaiRepository.findById(data.getShudaiCd()).ifPresentOrElse(entity -> {
-                        shudaiRepository.delete(entity);
+                    repository.findById(data.getShainCd()).ifPresentOrElse(entity -> {
+                        repository.delete(entity);
                         returnValue.deleteCount++;
                     }, () -> {
                         // TODO log
@@ -59,8 +55,11 @@ public class ShudaiServiceImpl extends TcsBaseService implements ShudaiService {
                 default:
                     break;
             }
+
+
         }
 
+        // TODO Auto-generated method stub
         return returnValue;
     }
 

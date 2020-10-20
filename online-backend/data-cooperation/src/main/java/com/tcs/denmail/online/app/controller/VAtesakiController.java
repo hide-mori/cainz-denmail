@@ -1,8 +1,9 @@
 package com.tcs.denmail.online.app.controller;
 
+import java.util.List;
 import com.tcs.denmail.common.controller.TcsBaseController;
+import com.tcs.denmail.online.app.model.CooperationResponseModel;
 import com.tcs.denmail.online.app.model.VAtesakiModel;
-import com.tcs.denmail.online.domain.entity.VAtesakiEntity;
 import com.tcs.denmail.online.domain.service.vatesaki.VAtesakiService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -17,12 +18,9 @@ public class VAtesakiController extends TcsBaseController {
     private VAtesakiService vAtesakiService;
 
     @RequestMapping(path = "/t-v-atesaki", method = RequestMethod.POST)
-    public VAtesakiEntity getRenrakuDetail(@RequestBody VAtesakiModel vAtesakiModel) {
+    public CooperationResponseModel getRenrakuDetail(@RequestBody List<VAtesakiModel> dataList) {
 
-
-        VAtesakiEntity vAtesakiEntity = vAtesakiService.syncData(vAtesakiModel);
-
-        return vAtesakiEntity;
+        return vAtesakiService.syncData(dataList);
     }
 
 }

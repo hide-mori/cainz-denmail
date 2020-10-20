@@ -1,8 +1,9 @@
 package com.tcs.denmail.online.app.controller;
 
+import java.util.List;
 import com.tcs.denmail.common.controller.TcsBaseController;
 import com.tcs.denmail.online.app.model.AtesakiCdModel;
-import com.tcs.denmail.online.domain.entity.AtesakiCdEntity;
+import com.tcs.denmail.online.app.model.CooperationResponseModel;
 import com.tcs.denmail.online.domain.service.atesakicd.AtesakiCdService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -21,12 +22,9 @@ public class AtesakiCdController extends TcsBaseController {
     private AtesakiCdService atesakiCdService;
 
     @RequestMapping(path = "/t-atesaki-cd", method = RequestMethod.POST)
-    public AtesakiCdEntity getRenrakuDetail(@RequestBody AtesakiCdModel atesakiCdModel) {
+    public CooperationResponseModel getRenrakuDetail(@RequestBody List<AtesakiCdModel> dataList) {
 
-
-        AtesakiCdEntity atesakiCdEntity = atesakiCdService.syncData(atesakiCdModel);
-
-        return atesakiCdEntity;
+        return atesakiCdService.syncData(dataList);
     }
 
 }

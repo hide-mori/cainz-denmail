@@ -1,9 +1,10 @@
 package com.tcs.denmail.online.domain.service;
 
-import com.tcs.denmail.common.entity.TcsBaseEntity;
+import java.util.List;
+import com.tcs.denmail.online.app.model.CooperationResponseModel;
 
-public interface DataCooperationService<I, O extends TcsBaseEntity> {
+public interface DataCooperationService<I> {
 
-    O syncData(I in);
+    CooperationResponseModel syncData(List<I> dataList);
 
 }

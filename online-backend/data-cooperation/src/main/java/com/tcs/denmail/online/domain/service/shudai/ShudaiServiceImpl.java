@@ -3,6 +3,7 @@ package com.tcs.denmail.online.domain.service.shudai;
 import java.util.List;
 import java.util.Optional;
 import com.tcs.denmail.common.service.TcsBaseService;
+import com.tcs.denmail.common.util.LogUtil;
 import com.tcs.denmail.online.app.model.CooperationResponseModel;
 import com.tcs.denmail.online.app.model.ShudaiModel;
 import com.tcs.denmail.online.domain.condition.RealTimeLinkDeleteFlg;
@@ -53,10 +54,12 @@ public class ShudaiServiceImpl extends TcsBaseService implements ShudaiService {
                         shudaiRepository.delete(entity);
                         returnValue.deleteCount++;
                     }, () -> {
-                        // TODO log
+                        // 存在しない
+                        LogUtil.log("DM0001W", data.toString());
                     });
                     break;
                 default:
+                    LogUtil.log("DM0002W", data.toString());
                     break;
             }
         }

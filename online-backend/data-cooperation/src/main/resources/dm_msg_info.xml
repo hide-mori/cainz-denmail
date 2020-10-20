@@ -25,5 +25,11 @@
         content="システムに問題があり処理を停止しました。" >
     </msg-info>
     
+    <msg-info id="DM0001W" level="WARN" 
+        content="削除対象が存在しません。 Request Data: {0}。" >
+    </msg-info>
+    <msg-info id="DM0002W" level="WARN" 
+        content="realTimeLinkDeleteFlgが正しくありません。realTimeLinkDeleteFlg：{0}。" >
+    </msg-info>  
 
 </definition>

@@ -2,6 +2,7 @@ package com.tcs.denmail.online.domain.service.atesakicd;
 
 import java.util.List;
 import com.tcs.denmail.common.service.TcsBaseService;
+import com.tcs.denmail.common.util.LogUtil;
 import com.tcs.denmail.online.app.model.AtesakiCdModel;
 import com.tcs.denmail.online.app.model.CooperationResponseModel;
 import com.tcs.denmail.online.domain.condition.RealTimeLinkDeleteFlg;
@@ -22,20 +23,19 @@ public class AtesakiCdServiceImpl extends TcsBaseService implements AtesakiCdSer
     public CooperationResponseModel syncData(List<AtesakiCdModel> inList) {
         CooperationResponseModel returnValue = new CooperationResponseModel();
 
-        for (AtesakiCdModel in : inList) {
+        for (AtesakiCdModel data : inList) {
             AtesakiCdEntity atesakiCdEntity = new AtesakiCdEntity();
-            atesakiCdEntity.setKanriNo(in.getKanriNo());
-            atesakiCdEntity.setTaishoKbn(in.getTaishoKbn());
-            atesakiCdEntity.setCAtesakiCd(in.getCAtesakiCd());
-            atesakiCdEntity.setRAtesakiCd(in.getRAtesakiCd());
+            atesakiCdEntity.setKanriNo(data.getKanriNo());
+            atesakiCdEntity.setTaishoKbn(data.getTaishoKbn());
+            atesakiCdEntity.setCAtesakiCd(data.getCAtesakiCd());
+            atesakiCdEntity.setRAtesakiCd(data.getRAtesakiCd());
 
-            switch (in.getRealTimeLinkDeleteFlg()) {
+            switch (data.getRealTimeLinkDeleteFlg()) {
                 // INSERT_UPDATE
                 case RealTimeLinkDeleteFlg.INSERT_UPDATE:
                     // DBよりデータを取得(キー値)
-                    if (atesakiCdRepository.findById(atesakiCdEntity).isPresent()) {
-                        // TODO log
-                    } else {
+                    // DBに存在しない場合、登録する
+                    if (!atesakiCdRepository.findById(atesakiCdEntity).isPresent()) {
                         atesakiCdRepository.save(atesakiCdEntity);
                         returnValue.insertCount++;
                     }
@@ -46,10 +46,12 @@ public class AtesakiCdServiceImpl extends TcsBaseService implements AtesakiCdSer
                         atesakiCdRepository.delete(entity);
                         returnValue.deleteCount++;
                     }, () -> {
-                        // TODO log
+                        // 例外 存在しない
+                        LogUtil.log("DM0001W", data.toString());
                     });
                     break;
                 default:
+                    LogUtil.log("DM0002W", data.toString());
                     break;
             }
         }

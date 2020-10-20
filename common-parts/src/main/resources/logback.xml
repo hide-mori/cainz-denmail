@@ -15,7 +15,11 @@
             <maxHistory>5</maxHistory>
         </rollingPolicy>
     </appender>
-    <root level="DEBUG">
+
+    <logger name="com.tcs.denmail" level="debug"></logger>
+    <logger name="org.hibernate.type.descriptor.sql.BasicBinder" level="trace"></logger>
+    
+    <root level="INFO">
         <appender-ref ref="CONSOLE"/>
         <appender-ref ref="FILE"/>
     </root>

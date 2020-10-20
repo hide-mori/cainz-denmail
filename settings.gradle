@@ -1,2 +1,8 @@
 rootProject.name = 'cainz-denmail'
-include("common-parts", "online-backend:data-cooperation")
+// 共通機能
+include("common-parts")
+
+//オンラインバックエンド
+include("online-backend:data-cooperation")
+include("online-backend:renraku-list")
+include("online-backend:renraku-detail")

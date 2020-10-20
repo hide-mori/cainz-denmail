@@ -1,6 +1,8 @@
 package com.tcs.denmail.online.repository;
 
 import java.util.Optional;
+
+import com.tcs.denmail.common.msg.MsgProperty;
 import com.tcs.denmail.online.domain.entity.VersionEntity;
 import com.tcs.denmail.online.domain.repository.VersionRepository;
 import org.junit.jupiter.api.Test;
@@ -19,6 +21,8 @@ public class VersionRepositoryTest {
     @Transactional
     @Commit
     public void test001() {
+        // メッセージ取得部品の初期化
+        MsgProperty.startup();
         Optional<VersionEntity> find = versionRepository.findById(2);
 
         find.ifPresentOrElse(versionEntity -> {
@@ -35,6 +39,8 @@ public class VersionRepositoryTest {
     @Transactional
     @Commit
     public void test002() {
+        // メッセージ取得部品の初期化
+        MsgProperty.startup();
 
         VersionEntity entity = new VersionEntity();
         entity.setId(2);

@@ -1,4 +1,4 @@
-<ion-grid>
+<ion-grid class="ion-no-padding">
   <ion-row>
     <ion-col class="ion-no-padding" *ngFor="let status of statusArr">
       <ion-card class="status-card ion-no-margin" (click)="selectOneStatusItem($event, status)">
@@ -7,7 +7,7 @@
             style="background: var({{status.varcolor}})" ></div>
             <div  style="font-size:medium" >{{status.name}}</div>
             <div  style="font-size:medium" >{{status.name1}}</div>
-            <div  style="font-size:medium" >{{status.cnt}}</div>
+            <div  style="font-size:x-large" >9{{status.cnt}}</div>
         </ion-card-content>
       </ion-card>
     </ion-col>

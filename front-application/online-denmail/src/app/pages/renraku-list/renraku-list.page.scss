@@ -1,14 +1,13 @@
 
-$work-item-height: 110px;
+$work-item-height: 85px;
 
 .renraku-toolbar{
   --background: var(--ion-color-renraku_toolbar_bg);
 }
-
 .vertical-bar{
     width: 30px;
-    height: $work-item-height;
-    border-radius: 15px;
+    height: $work-item-height; 
+    /** border-radius: 15px; **/   
 }
 .vertical-bar_left {
   width: 5px;
@@ -39,11 +38,11 @@ $work-item-height: 110px;
     letter-spacing: 0.02em;
     line-height:1.4em;
   }  
+  /** white-space: pre-wrap; **/
   .work-card .work-item p {
     font-size: x-large;
     letter-spacing: 0.02em;
     line-height:1.4em;
-    white-space: pre-wrap;
   }  
   .work-card ion-card-header {
     padding: 0;

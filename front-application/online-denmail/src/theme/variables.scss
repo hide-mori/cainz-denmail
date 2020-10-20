@@ -95,12 +95,11 @@ $card-md-margin-start:                3px !default;
   --ion-color-status_excluded: #203324;
   --ion-color-status_completed: #5260ff;
 
-    /** status-color  #aacca2 **/
+    /** renraku_toolbar  Secondary #3dc2ff **/
     --ion-color-renraku_toolbar_bg_1:#aacca2;
     --ion-color-renraku_toolbar_bg_2:#78e27c;
     --ion-color-renraku_toolbar_bg_3:#78e27c;
-    --ion-color-renraku_toolbar_bg:#aacca2;
-
+    --ion-color-renraku_toolbar_bg:#3dc2ff;
 }
 
 @media (prefers-color-scheme: dark) {

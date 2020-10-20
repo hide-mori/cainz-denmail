@@ -1,0 +1,48 @@
+buildscript {
+	repositories {
+		mavenCentral()
+	}
+}
+
+plugins {
+	id 'java-library'
+	id 'org.springframework.boot' version "${springBoot}"
+	id 'io.spring.dependency-management' version "${dependencyManagement}"
+}
+
+allprojects {
+	group = 'com.tcs.denmail'
+	version = '0.0.1-SNAPSHOT'
+	sourceCompatibility = 11
+}
+subprojects {
+
+	apply plugin: 'org.springframework.boot'
+	apply plugin: 'io.spring.dependency-management'
+	apply plugin: 'java-library'
+	apply plugin: 'java'
+
+	repositories {
+		mavenCentral()
+	}
+
+	configurations {
+		compileOnly {
+			extendsFrom annotationProcessor
+		}
+	}
+	test {
+		useJUnitPlatform()
+	}
+}
+
+// メインプロジェクト単位ではbootJarを行わない
+project(":online-backend") {
+    bootJar {
+		enabled = false
+	}
+}
+
+bootJar {
+	enabled = false
+}

@@ -11,3 +11,18 @@ gradle-app.setting
 
 # Cache of project
 .gradletasknamecache
+
+HELP.md
+.gradle
+build/
+!gradle/wrapper/gradle-wrapper.jar
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+### VS Code ###
+**/bin/
+**/.vscode/
+**/.classpath
+**/.project
+**/.settings/
+

@@ -22,7 +22,7 @@ public class AtesakiCdController extends TcsBaseController {
     private AtesakiCdService atesakiCdService;
 
     @RequestMapping(path = "/t-atesaki-cd", method = RequestMethod.POST)
-    public CooperationResponseModel getRenrakuDetail(@RequestBody List<AtesakiCdModel> dataList) {
+    public CooperationResponseModel dataCooperate(@RequestBody List<AtesakiCdModel> dataList) {
 
         return atesakiCdService.syncData(dataList);
     }

@@ -11,6 +11,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+/**
+ * 連絡文書添付ファイル名Controller
+ */
 @RestController
 public class RenrakuFileController extends TcsBaseController {
 
@@ -18,7 +21,7 @@ public class RenrakuFileController extends TcsBaseController {
     private RenrakuFileService renrakuFileService;
 
     @RequestMapping(path = "/t-renraku-file", method = RequestMethod.POST)
-    public CooperationResponseModel getRenrakuDetail(@RequestBody List<RenrakuFileModel> dataList) {
+    public CooperationResponseModel dataCooperate(@RequestBody List<RenrakuFileModel> dataList) {
 
         return renrakuFileService.syncData(dataList);
     }

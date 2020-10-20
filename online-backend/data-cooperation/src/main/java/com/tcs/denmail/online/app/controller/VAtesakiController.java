@@ -11,6 +11,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+/**
+ * 宛先マスタビューController
+ */
 @RestController
 public class VAtesakiController extends TcsBaseController {
 
@@ -18,7 +21,7 @@ public class VAtesakiController extends TcsBaseController {
     private VAtesakiService vAtesakiService;
 
     @RequestMapping(path = "/t-v-atesaki", method = RequestMethod.POST)
-    public CooperationResponseModel getRenrakuDetail(@RequestBody List<VAtesakiModel> dataList) {
+    public CooperationResponseModel dataCooperate(@RequestBody List<VAtesakiModel> dataList) {
 
         return vAtesakiService.syncData(dataList);
     }

@@ -11,6 +11,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+/**
+ * 連絡文書参照状況Controller
+ */
 @RestController
 public class RenrakuJokyoController extends TcsBaseController {
 
@@ -18,8 +21,7 @@ public class RenrakuJokyoController extends TcsBaseController {
     private RenrakuJokyoService renrakuJokyoService;
 
     @RequestMapping(path = "/t-renraku-jokyo", method = RequestMethod.POST)
-    public CooperationResponseModel getRenrakuDetail(
-            @RequestBody List<RenrakuJokyoModel> dataList) {
+    public CooperationResponseModel dataCooperate(@RequestBody List<RenrakuJokyoModel> dataList) {
 
         return renrakuJokyoService.syncData(dataList);
     }

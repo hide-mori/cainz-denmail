@@ -13,7 +13,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 /**
  * 主題マスタController
- * 
  */
 @RestController
 public class ShudaiController extends TcsBaseController {
@@ -22,7 +21,7 @@ public class ShudaiController extends TcsBaseController {
     private ShudaiService shudaiService;
 
     @RequestMapping(path = "/m-shudai", method = RequestMethod.POST)
-    public CooperationResponseModel getRenrakuDetail(@RequestBody List<ShudaiModel> dataList) {
+    public CooperationResponseModel dataCooperate(@RequestBody List<ShudaiModel> dataList) {
 
         return shudaiService.syncData(dataList);
     }

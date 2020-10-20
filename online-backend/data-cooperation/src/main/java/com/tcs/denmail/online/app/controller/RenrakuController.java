@@ -23,7 +23,7 @@ public class RenrakuController extends TcsBaseController {
     private RenrakuService renrakuService;
 
     @RequestMapping(path = "/t-renraku", method = RequestMethod.POST)
-    public CooperationResponseModel getRenrakuDetail(@RequestBody List<RenrakuModel> dataList) {
+    public CooperationResponseModel dataCooperate(@RequestBody List<RenrakuModel> dataList) {
 
         return renrakuService.syncData(dataList);
     }

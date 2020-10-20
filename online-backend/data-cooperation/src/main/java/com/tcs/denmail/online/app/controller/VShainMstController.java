@@ -11,6 +11,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+/**
+ * 社員マスタビューController
+ */
 @RestController
 public class VShainMstController extends TcsBaseController {
 
@@ -18,7 +21,7 @@ public class VShainMstController extends TcsBaseController {
     private VShainMstService vShainMstService;
 
     @RequestMapping(path = "/t-v-shain-mst", method = RequestMethod.POST)
-    public CooperationResponseModel getRenrakuDetail(@RequestBody List<VShainMstModel> dataList) {
+    public CooperationResponseModel dataCooperate(@RequestBody List<VShainMstModel> dataList) {
 
         return vShainMstService.syncData(dataList);
     }

@@ -1,7 +1,6 @@
 package com.tcs.denmail.online.domain.service.shainmst;
 
 import java.util.List;
-import java.util.Optional;
 import com.tcs.denmail.common.service.TcsBaseService;
 import com.tcs.denmail.common.util.LogUtil;
 import com.tcs.denmail.online.app.model.CooperationResponseModel;

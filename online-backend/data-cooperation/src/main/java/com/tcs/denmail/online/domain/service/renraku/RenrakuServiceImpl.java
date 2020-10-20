@@ -2,6 +2,7 @@ package com.tcs.denmail.online.domain.service.renraku;
 
 import java.util.List;
 import com.tcs.denmail.common.service.TcsBaseService;
+import com.tcs.denmail.common.util.LogUtil;
 import com.tcs.denmail.online.app.model.CooperationResponseModel;
 import com.tcs.denmail.online.app.model.RenrakuModel;
 import com.tcs.denmail.online.domain.condition.RealTimeLinkDeleteFlg;
@@ -47,7 +48,8 @@ public class RenrakuServiceImpl extends TcsBaseService implements RenrakuService
                         renrakuRepository.delete(entity);
                         returnValue.deleteCount++;
                     }, () -> {
-                        // TODO log
+                        // 例外 存在しない
+                        LogUtil.log("DM0001W", data.toString());
                     });
                     break;
                 default:

@@ -1,8 +1,9 @@
 package com.tcs.denmail.online.app.controller;
 
+import java.util.List;
 import com.tcs.denmail.common.controller.TcsBaseController;
+import com.tcs.denmail.online.app.model.CooperationResponseModel;
 import com.tcs.denmail.online.app.model.ShudaiModel;
-import com.tcs.denmail.online.domain.entity.ShudaiEntity;
 import com.tcs.denmail.online.domain.service.shudai.ShudaiService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -21,11 +22,9 @@ public class ShudaiController extends TcsBaseController {
     private ShudaiService shudaiService;
 
     @RequestMapping(path = "/m-shudai", method = RequestMethod.POST)
-    public ShudaiEntity getRenrakuDetail(@RequestBody ShudaiModel shudaiModel) {
+    public CooperationResponseModel getRenrakuDetail(@RequestBody List<ShudaiModel> dataList) {
 
-        ShudaiEntity shudaiEntity = shudaiService.syncData(shudaiModel);
-
-        return shudaiEntity;
+        return shudaiService.syncData(dataList);
     }
 
 }

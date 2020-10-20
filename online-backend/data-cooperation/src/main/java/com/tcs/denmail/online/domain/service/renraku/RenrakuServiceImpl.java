@@ -1,6 +1,8 @@
 package com.tcs.denmail.online.domain.service.renraku;
 
+import java.util.List;
 import com.tcs.denmail.common.service.TcsBaseService;
+import com.tcs.denmail.online.app.model.CooperationResponseModel;
 import com.tcs.denmail.online.app.model.RenrakuModel;
 import com.tcs.denmail.online.domain.condition.RealTimeLinkDeleteFlg;
 import com.tcs.denmail.online.domain.entity.RenrakuEntity;
@@ -18,41 +20,42 @@ public class RenrakuServiceImpl extends TcsBaseService implements RenrakuService
 
     @Transactional
     @Override
-    public RenrakuEntity syncData(RenrakuModel in) {
+    public CooperationResponseModel syncData(List<RenrakuModel> dataList) {
 
-        ReturnValue returnValue = new ReturnValue();
+        CooperationResponseModel returnValue = new CooperationResponseModel();
 
-        switch (in.getRealTimeLinkDeleteFlg()) {
-            // INSERT_UPDATE
-            case RealTimeLinkDeleteFlg.INSERT_UPDATE:
-                // DBよりデータを取得(キー値)
-                renrakuRepository.findById(in.getKanriNo()).ifPresentOrElse(entity -> {
-                    BeanUtils.copyProperties(in, entity);
-                    returnValue.entity = renrakuRepository.saveAndFlush(entity);
-                }, () -> {
-                    RenrakuEntity entity = new RenrakuEntity();
-                    BeanUtils.copyProperties(in, entity);
-                    returnValue.entity = renrakuRepository.saveAndFlush(entity);
-                });
-                break;
-            // DELETE
-            case RealTimeLinkDeleteFlg.DELETE:
-                renrakuRepository.findById(in.getKanriNo()).ifPresentOrElse(entity -> {
-                    returnValue.entity = entity;
-                    renrakuRepository.delete(entity);
-                }, () -> {
-                    // TODO log
-                });
-                break;
-            default:
-                break;
+        for (RenrakuModel data : dataList) {
+
+            switch (data.getRealTimeLinkDeleteFlg()) {
+                // INSERT_UPDATE
+                case RealTimeLinkDeleteFlg.INSERT_UPDATE:
+                    // DBよりデータを取得(キー値)
+                    renrakuRepository.findById(data.getKanriNo()).ifPresentOrElse(entity -> {
+                        BeanUtils.copyProperties(data, entity);
+                        renrakuRepository.save(entity);
+                        returnValue.updateCount++;
+                    }, () -> {
+                        RenrakuEntity entity = new RenrakuEntity();
+                        BeanUtils.copyProperties(data, entity);
+                        renrakuRepository.save(entity);
+                        returnValue.insertCount++;
+                    });
+                    break;
+                // DELETE
+                case RealTimeLinkDeleteFlg.DELETE:
+                    renrakuRepository.findById(data.getKanriNo()).ifPresentOrElse(entity -> {
+                        renrakuRepository.delete(entity);
+                        returnValue.deleteCount++;
+                    }, () -> {
+                        // TODO log
+                    });
+                    break;
+                default:
+                    break;
+            }
         }
 
-        return returnValue.entity;
-    }
-
-    class ReturnValue {
-        RenrakuEntity entity = new RenrakuEntity();
+        return returnValue;
     }
 
 }

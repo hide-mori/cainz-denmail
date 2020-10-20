@@ -3,8 +3,8 @@ package com.tcs.denmail.online.app.controller;
 import java.util.List;
 import com.tcs.denmail.common.controller.TcsBaseController;
 import com.tcs.denmail.online.app.model.CooperationResponseModel;
-import com.tcs.denmail.online.app.model.RenrakuFileModel;
-import com.tcs.denmail.online.domain.service.renraku.file.RenrakuFileService;
+import com.tcs.denmail.online.app.model.VShainMstModel;
+import com.tcs.denmail.online.domain.service.shainmst.VShainMstService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -12,15 +12,15 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class RenrakuFileController extends TcsBaseController {
+public class VShainMstController extends TcsBaseController {
 
     @Autowired
-    private RenrakuFileService renrakuFileService;
+    private VShainMstService vShainMstService;
 
-    @RequestMapping(path = "/t-renraku-file", method = RequestMethod.POST)
-    public CooperationResponseModel getRenrakuDetail(@RequestBody List<RenrakuFileModel> dataList) {
+    @RequestMapping(path = "/t-v-shain-mst", method = RequestMethod.POST)
+    public CooperationResponseModel getRenrakuDetail(@RequestBody List<VShainMstModel> dataList) {
 
-        return renrakuFileService.syncData(dataList);
+        return vShainMstService.syncData(dataList);
     }
 
 }

@@ -35,7 +35,7 @@
     <msg-info id="DM0001I" level="INFO" 
         content="データ連携処理を開始しました。 Data: {0}。" >
     </msg-info>
-    <msg-info id="DM0001I" level="INFO" 
+    <msg-info id="DM0002I" level="INFO" 
         content="データ連携処理を終了しました。 Data: {0}。" >
     </msg-info>
 

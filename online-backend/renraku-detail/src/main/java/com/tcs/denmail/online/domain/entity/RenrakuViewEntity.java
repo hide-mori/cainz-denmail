@@ -1,9 +1,12 @@
 package com.tcs.denmail.online.domain.entity;
 
+import java.util.List;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
+import javax.persistence.OrderBy;
 import javax.persistence.Table;
 import com.tcs.denmail.common.entity.TcsBaseEntity;
 import org.hibernate.annotations.Fetch;
@@ -99,4 +102,9 @@ public class RenrakuViewEntity extends TcsBaseEntity {
             insertable = false, updatable = false))
     @JoinColumnOrFormula(formula = @JoinFormula(referencedColumnName = "nmKbn", value = "'003'"))
     private NameMasterEntity henshinHoho;
+
+    @OneToMany
+    @JoinColumn(name = "kanriNo")
+    @OrderBy("renNo ASC")
+    private List<RenrakuFileEntity> attachmentFiles;
 }

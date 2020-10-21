@@ -1,5 +1,6 @@
 package com.tcs.denmail.online.app.model;
 
+import java.util.List;
 import lombok.Data;
 
 @Data
@@ -75,4 +76,6 @@ public class RenrakuDetailModel {
     private String dispAtesaki;
     /** 表示用対象 */
     private String dispTaisho;
+    /** 添付ファイルリスト */
+    private List<String> attachmentFiles;
 }

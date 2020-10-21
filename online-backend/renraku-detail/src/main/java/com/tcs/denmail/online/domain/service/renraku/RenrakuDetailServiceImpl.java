@@ -1,7 +1,8 @@
 package com.tcs.denmail.online.domain.service.renraku;
 
+import java.util.List;
 import java.util.Optional;
-
+import java.util.stream.Collectors;
 import com.tcs.denmail.common.service.TcsBaseService;
 import com.tcs.denmail.online.app.model.RenrakuDetailModel;
 import com.tcs.denmail.online.domain.condition.BUNSHO_KBN;
@@ -60,7 +61,8 @@ public class RenrakuDetailServiceImpl extends TcsBaseService implements RenrakuD
         }
 
         // 主題 [DISP_FLG]が'1'の場合のみ表示
-        if (renrakuEntity.getShudai() != null && DISP_FLG.TRUE.getCode().equals((renrakuEntity.getShudai().getDispFlg()))) {
+        if (renrakuEntity.getShudai() != null
+                && DISP_FLG.TRUE.getCode().equals((renrakuEntity.getShudai().getDispFlg()))) {
             model.setShudaiNm(renrakuEntity.getShudai().getShudaiNm());
         }
 
@@ -73,8 +75,9 @@ public class RenrakuDetailServiceImpl extends TcsBaseService implements RenrakuD
                 HENSHIN_YOFU_FLG.getValueByCode(renrakuEntity.getHenshinYofuFlg()));
         if (HENSHIN_YOFU_FLG.FALSE.getCode().equals(renrakuEntity.getHenshinYofuFlg())) {
             model.setHenshinKigenYmd(HENSHIN_YOFU_FLG.FALSE.getPlaceholder());
-        }else {
-            String henshinHohoText  = renrakuEntity.getHenshinHoho() == null ? null : renrakuEntity.getHenshinHoho().getNmKj();
+        } else {
+            String henshinHohoText = renrakuEntity.getHenshinHoho() == null ? null
+                    : renrakuEntity.getHenshinHoho().getNmKj();
             model.setHenshinHohoText(henshinHohoText);
         }
 
@@ -82,7 +85,11 @@ public class RenrakuDetailServiceImpl extends TcsBaseService implements RenrakuD
         model.setTanawariYofuText(
                 TANAWARI_YOFU_FLG.getValueByCode(renrakuEntity.getTanawariYofuFlg()));
 
-        model.setHenshinHohoText(renrakuEntity.getHenshinHoho().getNmKj());
+        // 添付ファイルリスト
+        List<String> files = renrakuEntity.getAttachmentFiles().stream().map(e -> e.getFileName())
+                .collect(Collectors.toList());
+        model.setAttachmentFiles(files);
+
         return model;
     }
 }

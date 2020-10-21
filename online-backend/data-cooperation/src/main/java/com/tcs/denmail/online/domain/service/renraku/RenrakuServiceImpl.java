@@ -26,6 +26,8 @@ public class RenrakuServiceImpl extends TcsBaseService implements RenrakuService
         CooperationResponseModel returnValue = new CooperationResponseModel();
 
         for (RenrakuModel data : dataList) {
+            // 開始ログ
+            logStart(data);
 
             switch (data.getRealTimeLinkDeleteFlg()) {
                 // INSERT_UPDATE
@@ -53,8 +55,11 @@ public class RenrakuServiceImpl extends TcsBaseService implements RenrakuService
                     });
                     break;
                 default:
+                    LogUtil.log("DM0002W", data.toString());
                     break;
             }
+            // 終了ログ
+            logEnd(data);
         }
 
         return returnValue;

@@ -25,6 +25,8 @@ public class RenrakuJokyoServiceImpl extends TcsBaseService implements RenrakuJo
         CooperationResponseModel returnValue = new CooperationResponseModel();
 
         for (RenrakuJokyoModel data : dataList) {
+            // 開始ログ
+            logStart(data);
 
             RenrakuJokyoEntity.Pk pk =
                     new RenrakuJokyoEntity.Pk(data.getKanriNo(), data.getAtesakiTenpoCd());
@@ -58,6 +60,8 @@ public class RenrakuJokyoServiceImpl extends TcsBaseService implements RenrakuJo
                     LogUtil.log("DM0002W", data.toString());
                     break;
             }
+            // 終了ログ
+            logEnd(data);
         }
         return returnValue;
     }

@@ -26,6 +26,8 @@ public class ShudaiServiceImpl extends TcsBaseService implements ShudaiService {
         CooperationResponseModel returnValue = new CooperationResponseModel();
 
         for (ShudaiModel data : dataList) {
+            // 開始ログ
+            logStart(data);
 
             switch (data.getRealTimeLinkDeleteFlg()) {
                 // INSERT_UPDATE
@@ -62,6 +64,8 @@ public class ShudaiServiceImpl extends TcsBaseService implements ShudaiService {
                     LogUtil.log("DM0002W", data.toString());
                     break;
             }
+            // 終了ログ
+            logEnd(data);
         }
 
         return returnValue;

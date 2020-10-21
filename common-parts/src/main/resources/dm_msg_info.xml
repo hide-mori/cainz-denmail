@@ -32,11 +32,18 @@
         content="{0}メソッドを終了しました。">
     </msg-info>
 
+    <msg-info id="DM0001I" level="INFO" 
+        content="データ連携処理を開始しました。 Data: {0}。" >
+    </msg-info>
+    <msg-info id="DM0001I" level="INFO" 
+        content="データ連携処理を終了しました。 Data: {0}。" >
+    </msg-info>
+
     <msg-info id="DM0001W" level="WARN" 
-        content="削除対象が存在しません。 Request Data: {0}。" >
+        content="削除対象が存在しません。Data: {0}。" >
     </msg-info>
     <msg-info id="DM0002W" level="WARN" 
-        content="realTimeLinkDeleteFlgが正しくありません。realTimeLinkDeleteFlg：{0}。" >
+        content="realTimeLinkDeleteFlgが正しくありません。Data：{0}。" >
     </msg-info> 
  
 </definition>

@@ -9,6 +9,7 @@ import { HttpConstants } from '../constants/http-constants';
 import { SessionStorageEnum } from '../constants/session-strage.enum';
 import { Login } from '../model/login';
 import { BaseService } from './base.service';
+import { environment } from '../../../environments/environment';
 
 /*
 import * as messageInfo from 'src/app/common/settings/message-info';
@@ -46,10 +47,22 @@ export class AuthService extends BaseService {
         "Access-Control-Allow-Origin": "*"
       })
     };
-    const url = 'http://localhost:8080/checkloginuserpost';
+
+    const getHttpOptions = {
+        params: {
+          shainCd: login.shainCd,
+        },
+        headers: new HttpHeaders({
+          "Content-Type": "application/json",
+          "Access-Control-Allow-Origin": "*"
+        })
+    };
+    
+    const url = environment.API_URL_CHECK_LOGINUSER;
 
     // login APIにPOSTする
-    return this.http.post<Login>(url, login, httpOptions)
+    //return this.http.post<Login>(url, login, httpOptions)
+    return this.http.get<Login>(url, getHttpOptions)
       .toPromise()
       .then((result: Login) => {
         // 認証結果がsuccessならトークンを返す

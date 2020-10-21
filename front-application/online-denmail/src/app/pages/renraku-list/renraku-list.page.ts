@@ -14,8 +14,10 @@ import { StatusItem } from "../../modal/renrakuData";
 import { StatusUtility } from "../../utility/status-utility";
 import { AuthService } from "../../common/services/auth.service";
 import { Login } from "../../common/model/login";
+import { environment } from '../../../environments/environment';
 
 import { Router, ActivatedRoute, ActivatedRouteSnapshot } from "@angular/router";
+import { getUrl } from '@ionic/angular/directives/navigation/stack-utils';
 
 export class WorkList {
   itemList: RenrakuBunshouData[];
@@ -40,8 +42,7 @@ export class RenrakuListPage implements OnInit, OnChanges {
   shainCd: string = "10147718";
   loginInfoData: Login;
 
-  // urlPathString: string = "assets/apidata/workList.json";
-  urlPathString: string = "http://localhost:8080/renrakulist";
+  urlPathString: string =  environment.API_URL_RENRAKU_LIST;
 
   workList: RenrakuBunshouData[];
 

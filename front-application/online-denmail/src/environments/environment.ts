@@ -3,7 +3,17 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+
+  production: false,
+  
+  //  'http://localhost:8080/checkloginuserpost';
+  API_URL_CHECK_LOGINUSER : "http://localhost:8081/checkloginuser",
+
+  // urlPathString: string = "assets/apidata/workList.json";
+  // urlPathString: string = "http://localhost:8081/renrakulist";
+  API_URL_RENRAKU_LIST :"http://localhost:8081/renrakulist",
+
+  API_URL_RENRAKU_DETAIL :"http://localhost:8080/renraku"
 };
 
 /*

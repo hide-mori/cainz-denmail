@@ -33,4 +33,5 @@ export class RenrakuDetailData {
     shoninShainCd:string;
     dispAtesaki:string;
     dispTaisho:string;
+    attachmentFiles:string[];
 }

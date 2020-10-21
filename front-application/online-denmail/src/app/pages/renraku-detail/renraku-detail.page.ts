@@ -1,10 +1,13 @@
 import { Component, OnInit } from "@angular/core";
 import { ActivatedRoute, ActivatedRouteSnapshot } from "@angular/router";
 
+import { Observable } from 'rxjs';
+
 import { StatusItem } from "../../modal/renrakuData";
 import { StatusUtility } from "../../utility/status-utility";
 import { AuthService } from "../../common/services/auth.service";
 import { Login } from "../../common/model/login";
+import { environment } from '../../../environments/environment';
 
 import { AttachmentFile } from "../../modal/AttachmentFile";
 import { ShainInfoData, RenrakuBunshouData } from "../../modal/renrakuData";
@@ -30,11 +33,11 @@ export class RenrakuDetailPage implements OnInit {
     public modalController: ModalController,
     private http: HttpClient,
     private authService: AuthService
-  ) {}
+  ) { }
 
   loginInfoData: Login;
   attachmentFiles: AttachmentFile[] = [];
-  statusName: string ="";
+  statusName: string = "";
 
   ngOnInit() {
     this.data = new RenrakuDetailData();
@@ -48,26 +51,58 @@ export class RenrakuDetailPage implements OnInit {
     tenpoCd = this.loginInfoData.tenpoCd;
 
     console.log("RenrakuDetailPage  ngOnInit;;;;;;;;;;;;;;;;");
-    console.log(this.loginInfoData );
-    
+    console.log(this.loginInfoData);
+
     let sub = this.route.params.subscribe(params => {
-        console.log("params['kanrino']=" + params['kanrino']);
-        kanriNo = params['kanrino'];
+      console.log("params['kanrino']=" + params['kanrino']);
+      kanriNo = params['kanrino'];
 
-        this.statusName = StatusUtility.getStatusName(params['statusId']);
+      this.statusName = StatusUtility.getStatusName(params['statusId']);
 
-        this.doSearchAction(kanriNo, tenpoCd);
-        this.getS3FileList();
-   });
-  } 
+      this.doSearchAction(kanriNo, tenpoCd)
+        .subscribe(
+          (res) => {
+          console.log(res);
+          this.data = res;
+          this.getS3FileList(res.kanriNo, res.attachmentFiles);
+        });
+    });
+  }
 
-  getS3FileList() {
+  getS3FileList(kanriNo: string, dbFiles: string[]) {
+
+    let setPageAttachmentFiles = function (fileArr: AttachmentFile[],
+      dbAttachmentFiles: string[],
+      s3AttachmentFiles: AttachmentFile[]) {
+
+      fileArr.splice(0);
+
+      dbAttachmentFiles.forEach(
+        dbFileName => {
+          let okArr: AttachmentFile[] = s3AttachmentFiles.filter(tmpF => tmpF.fileName == dbFileName);
+          if (okArr.length > 0) {
+            fileArr.push(okArr[0]);
+          } else {
+            fileArr.push(new AttachmentFile("", dbFileName, false, false));
+          }
+        });
+
+      //Test code
+      s3AttachmentFiles.forEach(
+        s3File => {
+          fileArr.push(s3File);
+        }
+      )
+      //Test code
+    };
+
+    // TODO: "files" ⇒　kanriNo;
     this.fileServiceService.getS3FileList("files").then((res) => {
       console.log(res);
       if (res.$response.error) {
         console.error(res.$response.error);
       } else {
-        this.attachmentFiles = res.Contents.map((s3object) => {
+        let s3Files: AttachmentFile[] = res.Contents.map((s3object) => {
           const objectKey = s3object.Key;
           const splitKey = objectKey.split("/");
           return new AttachmentFile(
@@ -76,6 +111,8 @@ export class RenrakuDetailPage implements OnInit {
             objectKey.endsWith(".pdf")
           );
         });
+
+        setPageAttachmentFiles(this.attachmentFiles, dbFiles, s3Files);
       }
     });
   }
@@ -92,12 +129,15 @@ export class RenrakuDetailPage implements OnInit {
   }
 
   data: RenrakuDetailData;
-  urlPathString: string = "http://localhost:8080/renraku";
+
+  urlPathString: string = environment.API_URL_RENRAKU_DETAIL;
+
   urlPathString_2: string = "";
-  async doSearchAction(kanriNo: string, tenpoCd: string) {
+　
+  doSearchAction(kanriNo: string, tenpoCd: string): Observable<RenrakuDetailData> {
     console.log("doSearchAction= kanriNo=" + kanriNo + ";tenpoCd=" + tenpoCd);
 
-    this.http
+    return this.http
       .get<RenrakuDetailData>(this.urlPathString, {
         params: {
           kanriNo: kanriNo,
@@ -107,10 +147,6 @@ export class RenrakuDetailPage implements OnInit {
           "Content-Type": "application/json",
           "Access-Control-Allow-Origin": "*",
         },
-      })
-      .subscribe((res) => {
-        console.log(res);
-        this.data = res;
       });
   }
 }

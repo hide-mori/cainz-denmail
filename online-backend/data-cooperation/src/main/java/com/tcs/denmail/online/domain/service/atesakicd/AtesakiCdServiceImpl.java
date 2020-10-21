@@ -24,8 +24,6 @@ public class AtesakiCdServiceImpl extends TcsBaseService implements AtesakiCdSer
         CooperationResponseModel returnValue = new CooperationResponseModel();
 
         for (AtesakiCdModel data : inList) {
-            // 開始ログ
-            logStart(data);
 
             AtesakiCdEntity atesakiCdEntity = new AtesakiCdEntity();
             atesakiCdEntity.setKanriNo(data.getKanriNo());
@@ -57,8 +55,6 @@ public class AtesakiCdServiceImpl extends TcsBaseService implements AtesakiCdSer
                     LogUtil.log("DM0002W", data.toString());
                     break;
             }
-            // 終了ログ
-            logEnd(data);
         }
         return returnValue;
     }

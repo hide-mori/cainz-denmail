@@ -42,7 +42,7 @@ public class CmtController extends TcsBaseController {
 
     @GetMapping(value = "/appex")
     public String appex() throws TcsApplicationException {
-        throw new TcsApplicationException("DM0003E");
+        throw new TcsApplicationException("DM0001F");
     }
 
     @GetMapping(value = "/sysex")

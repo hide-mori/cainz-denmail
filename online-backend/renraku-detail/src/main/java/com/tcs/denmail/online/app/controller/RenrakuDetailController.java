@@ -27,5 +27,13 @@ public class RenrakuDetailController extends TcsBaseController {
 
         return renrakuDetail;
     }
+    
+    @GetMapping("/renraku")
+    public RenrakuDetailModel getRenrakuDetail22(@RequestParam("kanriNo") String kanriNo, @RequestParam("atesakiTenpoCd") String atesakiTenpoCd) {
+
+        RenrakuDetailModel renrakuDetail = renrakuDetailService.getRenrakuDetail(kanriNo, atesakiTenpoCd);
+
+        return renrakuDetail;
+    }
 
 }

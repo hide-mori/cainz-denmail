@@ -27,8 +27,6 @@ public class ShainDptServiceImpl extends TcsBaseService implements ShainDptServi
         CooperationResponseModel returnValue = new CooperationResponseModel();
 
         for (ShainDptModel data : dataList) {
-            // 開始ログ
-            logStart(data);
 
             // 受信データ⇒Entity
             ShainDptEntity shainDptEntity = new ShainDptEntity();
@@ -74,8 +72,6 @@ public class ShainDptServiceImpl extends TcsBaseService implements ShainDptServi
                         break;
                 }
             }
-            // 終了ログ
-            logEnd(data);
         }
 
         return returnValue;

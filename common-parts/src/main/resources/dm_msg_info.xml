@@ -16,12 +16,15 @@
     <msg-info id="DM0002E" level="ERROR"
             content="店番号：{0}、口座番号：{1}に一致する口座がありません。">
     </msg-info>
+    <msg-info id="DM0003E" level="ERROR"
+            content="バリデーションエラーが発生しました。Entity: {0}。 エラーメッセージ： {1}">
+    </msg-info>
 
-    <msg-info id="DM0003E" level="FATAL" 
+    <msg-info id="DM0001F" level="FATAL" 
         content="アプリケーションエラー：{0}" >
     </msg-info>
 
-    <msg-info id="DM0004F" level="FATAL" 
+    <msg-info id="DM0002F" level="FATAL" 
         content="システムに問題があり処理を停止しました。" >
     </msg-info>
     

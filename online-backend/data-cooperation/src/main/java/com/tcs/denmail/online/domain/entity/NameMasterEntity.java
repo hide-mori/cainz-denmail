@@ -5,16 +5,19 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.IdClass;
 import javax.persistence.Table;
+import com.tcs.denmail.common.entity.TcsBaseEntity;
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
 @Data
+@EqualsAndHashCode(callSuper = true)
 @Entity
 @Table(name = "m_nm")
 @IdClass(NameMasterEntity.Pk.class)
-public class NameMasterEntity {
-    
+public class NameMasterEntity extends TcsBaseEntity {
+
     @Id
     private String nmKbn;
     @Id

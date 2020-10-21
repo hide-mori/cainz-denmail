@@ -24,8 +24,6 @@ public class RenrakuFileServiceImpl extends TcsBaseService implements RenrakuFil
         CooperationResponseModel returnValue = new CooperationResponseModel();
 
         for (RenrakuFileModel data : dataList) {
-            // 開始ログ
-            logStart(data);
 
             RenrakuFileEntity.Pk pk = new RenrakuFileEntity.Pk(data.getKanriNo(), data.getRenNo());
 
@@ -61,8 +59,6 @@ public class RenrakuFileServiceImpl extends TcsBaseService implements RenrakuFil
                     LogUtil.log("DM0002W", data.toString());
                     break;
             }
-            // 終了ログ
-            logEnd(data);
         }
         return returnValue;
     }

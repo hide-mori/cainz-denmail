@@ -21,7 +21,7 @@ public final class DateUtil {
         try {
             date = sdf.parse(string);
         } catch (ParseException e) {
-            throw new TcsApplicationException("DM0003E", e.getCause());
+            throw new TcsApplicationException("DM0001F", e.getCause());
         }
         return date;
     }
@@ -39,7 +39,7 @@ public final class DateUtil {
         try {
             dateTime = sdf.parse(yyyyMMddHHmmss);
         } catch (ParseException e) {
-            throw new TcsApplicationException("DM0003E", e.getCause());
+            throw new TcsApplicationException("DM0001F", e.getCause());
         }
         return dateTime;
     }
@@ -57,7 +57,7 @@ public final class DateUtil {
         try {
             date = sdf.parse(yyyyMMdd);
         } catch (ParseException e) {
-            throw new TcsApplicationException("DM0003E", e.getCause());
+            throw new TcsApplicationException("DM0001F", e.getCause());
         }
         return date;
     }

@@ -25,8 +25,6 @@ public class VShainMstServiceImpl extends TcsBaseService implements VShainMstSer
         CooperationResponseModel returnValue = new CooperationResponseModel();
 
         for (VShainMstModel data : dataList) {
-            // 開始ログ
-            logStart(data);
 
             switch (data.getRealTimeLinkDeleteFlg()) {
                 // INSERT_UPDATE
@@ -59,8 +57,6 @@ public class VShainMstServiceImpl extends TcsBaseService implements VShainMstSer
                     LogUtil.log("DM0002W", data.toString());
                     break;
             }
-            // 終了ログ
-            logEnd(data);
         }
 
         return returnValue;

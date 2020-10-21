@@ -25,6 +25,8 @@ public class VAtesakiServiceImpl extends TcsBaseService implements VAtesakiServi
         CooperationResponseModel returnValue = new CooperationResponseModel();
 
         for (VAtesakiModel data : dataList) {
+            // 開始ログ
+            logStart(data);
 
             switch (data.getRealTimeLinkDeleteFlg()) {
                 // INSERT_UPDATE
@@ -64,6 +66,8 @@ public class VAtesakiServiceImpl extends TcsBaseService implements VAtesakiServi
                     LogUtil.log("DM0002W", data.toString());
                     break;
             }
+            // 終了ログ
+            logEnd(data);
         }
 
         return returnValue;

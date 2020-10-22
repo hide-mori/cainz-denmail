@@ -6,3 +6,4 @@ include("common-parts")
 include("online-backend:data-cooperation")
 include("online-backend:renraku-list")
 include("online-backend:renraku-detail")
+//test
